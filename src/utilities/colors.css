@@ -1,0 +1,36 @@
+.light {
+  color-scheme: light;
+}
+  
+.dark {
+  color-scheme: dark;
+}
+
+.fg-color,
+[class*=fg-] {
+  color: var(--fg);
+}
+
+.bg-color,
+[class*=bg-] {
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+.fg-black, .fg-black * {
+  --fg: #000;
+}
+
+.fg-white, .fg-white * {
+  --fg: #fff;
+}
+
+.bg-black, .bg-black * {
+  --fg: #fff;
+  --bg: #000;
+}
+
+.bg-white, .bg-white * {
+  --fg: #000;
+  --bg: #fff;
+}

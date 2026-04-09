@@ -1,0 +1,62 @@
+.accordion,
+[class*=accordion-] {
+  color: var(--accordion-fg, var(--text, CanvasText));
+  margin-block-end: var(--accordion-mb, 1rem);
+  border: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-radius: var(--accordion-radius, var(--border-radius, 0.188rem));
+  background-color: var(--accordion-bg, var(--background, Canvas));
+  
+  details {
+    margin-block-end: 0;
+    
+    summary {
+      --svg: url("data:image/svg+xml,<svg viewBox='0 0 8 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m4 10-4-4h8z'/></svg>");
+      --ico: var(--accordion-fg, CurrentColor);
+      list-style-type: "";
+      position: relative;
+      
+      &:first-child {
+        padding-inline-end: 2rem;
+      }
+      
+      &:after {
+        display: inline-block;
+        content: "";
+        block-size: 1em;
+        inline-size: 0.5em;
+        background-color: var(--ico);
+        mask: var(--svg) no-repeat;
+        position: absolute;
+        inset-block-start: var(--accordion-ico-top, 0.75rem);
+        inset-inline-end: var(--accordion-ico-right, 1rem);
+      }
+    }
+    
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    :is([open] summary) {
+        --svg: url("data:image/svg+xml,<svg viewBox='0 0 8 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m4 6 4 4-8 1e-6z'/></svg>");
+      margin-block-end: 0;
+      border-block-end: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    }
+    
+    :last-child {
+      margin-block-end: 0;
+    }
+  }
+  
+  :not(:first-child) summary {
+    border-block-start: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  }
+  
+  summary, [open]::details-content {
+    padding-block: var(--accordion-py, 0.5rem);
+    padding-inline: var(--accordion-px, 1rem);
+  }
+  
+  [open]::details-content {
+    background-color: var(--accordion-content-bg, var(--accordion-bg, var(--background, Canvas)));
+  }
+}

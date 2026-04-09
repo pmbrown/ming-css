@@ -1,0 +1,111 @@
+details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
+  margin-block-end: var(--dropdown-mb, 1rem);
+  
+  summary {
+    list-style-type: "";
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  :is([open] summary) {
+    margin-block-end: 0;
+  }
+  
+  summary:after {
+    --svg: url("data:image/svg+xml,<svg viewBox='0 0 8 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m4 10-4-4h8z'/></svg>");
+    display: inline-block;
+    content: "";
+    block-size: 1em;
+    inline-size: 0.5em;
+    vertical-align: -0.115em;
+    background-color: var(--dropdown-ico, CurrentColor);
+    mask: var(--svg) no-repeat;
+    margin-inline-start: 0.375rem;
+  }
+  
+  :is([open] summary):after {
+    --svg: url("data:image/svg+xml,<svg viewBox='0 0 8 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m4 6 4 4-8 1e-6z'/></svg>");
+  }
+  
+  .dropdown, [class*=dropdown-], [class*=dropdown-body-] {
+    color: var(--dropdown-fg, CanvasText);
+    position: absolute;
+    inline-size: var(--dropdown-min, fit-content);
+    max-inline-size: var(--dropdown-max, 14rem);
+    margin-block-start: var(--dropdown-top, 0.25rem);
+    border: var(--dropdown-bd-width, var(--border-width, 1px)) solid var(--dropdown-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border-radius: var(--dropdown-radius, var(--border-radius, 0.188rem));
+    background-color: var(--dropdown-bg, var(--background, Canvas));
+    z-index: 2;
+  }
+  
+  :is(.dropdown, [class*=dropdown-]:not(.dropdown-body, [class*=dropdown-body-])) {
+    display: flex;
+    flex-direction: column;
+    
+    &:is(ul, ol) {
+      list-style-type: "";
+      margin-block-end: 0;
+      padding-inline-start: 0;
+    }
+    
+    a {
+      text-decoration: none;
+      display: block;
+    }
+    
+    button {
+      inline-size: 100%;
+      border: none;
+      border-radius: 0;
+    }
+    
+    a, button {
+      padding-block: var(--dropdown-py, 0.375rem);
+      padding-inline: var(--dropdown-px, 0.9rem);
+      background-color: var(--dropdown-bg, var(--background, Canvas));
+      
+      &:is(:hover, :focus) {
+        outline: none;
+        background-color: var(--dropdown-bg-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+      }
+    }
+    
+    &:not(ul, ol) :is(a, button):not(:first-child),
+    &:is(ul, ol) li:not(:first-child) {
+      border-block-start: var(--dropdown-bd-width, var(--border-width, 1px)) solid var(--dropdown-bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas)));
+    }
+    
+    &:not(ul, ol) :first-child:is(a, button),
+    &:is(ul, ol) li:first-child *:is(a, button) {
+      border-start-start-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+      border-start-end-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+    }
+    
+    &:not(ul, ol) :last-child:is(a, button),
+    &:is(ul, ol) li:last-child *:is(a, button) {
+      border-end-start-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+      border-end-end-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+    }
+  }
+  
+  .dropdown-body, [class*=dropdown-body-] {
+    padding-block: var(--dropdown-body-py, 1rem);
+    padding-inline: var(--dropdown-px, 0.9rem);
+    *:not(:last-child) {
+      margin-block-end: 0.5rem;
+    }
+  }
+  
+  .close-dropdown {
+    position: fixed;
+    inset: 0;
+    display: block;
+    content: "";
+  }
+}

@@ -1,0 +1,72 @@
+.list-group, .list-links,
+[class*=list-group-], [class*=list-links-] {
+  color: var(--list-group-fg, CanvasText);
+  max-inline-size: var(--list-group-width);
+  border: var(--list-group-bd-width, var(--border-width, 1px)) solid var(--list-group-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-radius: var(--list-group-radius, var(--border-radius, 0.188rem));
+  background-color: var(--list-group-bg, var(--background, Canvas));
+  
+  &:is(ul, ol) {
+    list-style-type: "";
+    padding-inline-start: 0;
+  }
+  
+  *:not(:first-child) {
+    border-block-start: var(--list-group-bd-width, var(--border-width, 1px)) solid var(--list-group-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  }
+  
+  &:is(ol) {
+    counter-reset: ol-list;
+    
+    li {
+      counter-increment: ol-list;
+    }
+  }
+  
+  &:is(.list-group, [class*=list-group-]):is(ol) li:before,
+  &:is(.list-links, [class*=list-links-]):is(ol) li a:before {
+    content: counter(ol-list) ". ";
+    margin-inline-end: 0.25rem;
+  }
+  
+  &:is(.list-group, [class*=list-group-]) :is(li, dt, dd),
+  &:is(.list-links, [class*=list-links-]) dt:not(:has(a)) {
+    padding-block: var(--list-group-py, 0.5rem);
+    padding-inline: var(--list-group-px, 0.75rem);
+  }
+  
+  dt {
+    font-weight: var(--dt-fw, 600);
+  }
+  
+  dd {
+    margin-inline-start: 0;
+  }
+  
+  &:is(.list-links, [class*=list-links-]) {
+    a {
+      text-decoration: none;
+      display: block;
+      padding-block: var(--list-group-py, 0.5rem);
+      padding-inline: var(--list-group-px, 0.75rem);
+      
+      &:is(:hover, :focus) {
+        background-color: var(--list-group-bg-hover, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+      }
+      
+      &:focus-visible {
+        outline: none;
+      }
+    }
+    
+    *:first-child a:is(:hover, :focus) {
+      border-start-start-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+      border-start-end-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+    }
+    
+    *:last-child a:is(:hover, :focus) {
+      border-end-start-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+      border-end-end-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+    }
+  }
+}

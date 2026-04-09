@@ -1,0 +1,41 @@
+.popover-primary {
+  color-scheme: dark;
+  --popover-fg: #fff;
+  --popover-bg: var(--primary);
+  --popover-bd-color: var(--primary-3);
+}
+
+.popover-success {
+  color-scheme: dark;
+  --popover-fg: #fff;
+  --popover-bg: var(--success);
+  --popover-bd-color: var(--success-3);
+}
+
+.popover-danger {
+  color-scheme: dark;
+  --popover-fg: #fff;
+  --popover-bg: var(--danger);
+  --popover-bd-color: var(--danger-2);
+}
+
+.popover-info {
+  color-scheme: light;
+  --popover-fg: #000;
+  --popover-bg: var(--info);
+  --popover-bd-color: var(--info-2);
+}
+
+.popover-warning {
+  color-scheme: light;
+  --popover-fg: #000;
+  --popover-bg: var(--warning);
+  --popover-bd-color: var(--warning-1);
+}
+
+.popover-secondary {
+  color-scheme: light;
+  --popover-fg: #000;
+  --popover-bg: var(--secondary);
+  --popover-bd-color: var(--secondary-3);
+}

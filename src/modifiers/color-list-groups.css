@@ -1,0 +1,47 @@
+.list-group-primary, .list-links-primary {
+  color-scheme: dark;
+  --list-group-fg: #fff;
+  --list-group-bg: var(--primary);
+  --list-group-bd-color: var(--primary-3);
+  --list-group-bg-hover: var(--primary-5);
+}
+
+.list-group-success, .list-links-success {
+  color-scheme: dark;
+  --list-group-fg: #fff;
+  --list-group-bg: var(--success);
+  --list-group-bd-color: var(--success-3);
+  --list-group-bg-hover: var(--success-5);
+}
+
+.list-group-danger, .list-links-danger {
+  color-scheme: dark;
+  --list-group-fg: #fff;
+  --list-group-bg: var(--danger);
+  --list-group-bd-color: var(--danger-2);
+  --list-group-bg-hover: var(--danger-5);
+}
+
+.list-group-info, .list-links-info {
+  color-scheme: light;
+  --list-group-fg: #000;
+  --list-group-bg: var(--info);
+  --list-group-bd-color: var(--info-2);
+  --list-group-bg-hover: var(--info-5);
+}
+
+.list-group-warning, .list-links-warning {
+  color-scheme: light;
+  --list-group-fg: #000;
+  --list-group-bg: var(--warning);
+  --list-group-bd-color: var(--warning-1);
+  --list-group-bg-hover: var(--warning-5);
+}
+
+.list-group-secondary, .list-links-secondary {
+  color-scheme: light;
+  --list-group-fg: #000;
+  --list-group-bg: var(--secondary);
+  --list-group-bd-color: var(--secondary-3);
+  --list-group-bg-hover: var(--secondary-5);
+}

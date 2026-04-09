@@ -1,0 +1,57 @@
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-balance, .text-balance * {
+  text-wrap: balance;
+}
+
+.text-pretty, .text-pretty * {
+  text-wrap: pretty;
+}
+
+.decoration-none, .decoration-none * {
+  text-decoration: none;
+}
+
+.text-link, .text-link * {
+  color: CanvasText;
+  text-decoration-color: CanvasText;
+}
+
+.font-family, .font-family * {
+  font-family: var(--ff);
+}
+
+.font-size, .font-size * {
+  font-size: var(--fs);
+}
+
+.font-weight, .font-weight * {
+  font-weight: var(--fw);
+}
+
+.line-height, .line-height * {
+  line-height: var(--lh);
+}
+
+.text-spacing, .text-spacing * {
+  letter-spacing: var(--ls);
+  word-spacing: var(--ws);
+}
+
+.font-variant, .font-variant * {
+  font-variant: var(--fv);
+}
+
+.text-transform, .text-transform * {
+  text-transform: var(--tt);
+}

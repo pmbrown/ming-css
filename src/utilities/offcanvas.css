@@ -1,0 +1,38 @@
+[class*=offcanvas-] {
+  margin: 0;
+  border-style: none;
+  border-radius: 0;
+}
+
+:is(.offcanvas-start, .offcanvas-end) {
+  block-size: 100%;
+  max-block-size: 100dvh;
+  max-inline-size: var(--offcanvas-width, 24rem);
+}
+
+:is(.offcanvas-top, .offcanvas-bottom) {
+  block-size: 100%;
+  max-block-size: var(--offcanvas-height, calc(33dvh - 2rem));
+  inline-size: 100%;
+  max-inline-size: 100%;
+}
+
+:is(.offcanvas-start) {
+  margin-inline-end: auto;
+  border-inline-end-style: solid;
+}
+
+:is(.offcanvas-end) {
+  margin-inline-start: auto;
+  border-inline-start-style: solid;
+}
+
+:is(.offcanvas-top) {
+  margin-block-end: auto;
+  border-block-end-style: solid;
+}
+
+:is(.offcanvas-bottom) {
+  margin-block-start: auto;
+  border-block-start-style: solid;
+}

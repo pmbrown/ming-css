@@ -1,0 +1,59 @@
+.table-primary {
+  color-scheme: dark;
+  --table-fg: #fff;
+  --th-bg: var(--primary);
+  --table-bg: var(--primary-3);
+  --table-bd-color: var(--primary-5);
+  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--primary-3));
+  --table-hover: color-mix(in srgb, CanvasText 10%, var(--primary-3));
+}
+
+.table-success {
+  color-scheme: dark;
+  --table-fg: #fff;
+  --th-bg: var(--success);
+  --table-bg: var(--success-3);
+  --table-bd-color: var(--success-5);
+  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--success-3));
+  --table-hover: color-mix(in srgb, CanvasText 10%, var(--success-3));
+}
+
+.table-danger {
+  color-scheme: dark;
+  --table-fg: #fff;
+  --th-bg: var(--danger);
+  --table-bg: var(--danger-2);
+  --table-bd-color: var(--danger-5);
+  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--danger-2));
+  --table-hover: color-mix(in srgb, CanvasText 10%, var(--danger-2));
+}
+
+.table-info {
+  color-scheme: light;
+  --table-fg: #000;
+  --th-bg: var(--info);
+  --table-bg: var(--info-2);
+  --table-bd-color: var(--info-5);
+  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--info-2));
+  --table-hover: color-mix(in srgb, CanvasText 10%, var(--info-2));
+}
+
+.table-warning {
+  color-scheme: light;
+  --table-fg: #000;
+  --th-bg: var(--warning);
+  --table-bg: var(--warning-1);
+  --table-bd-color: var(--warning-5);
+  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--warning-1));
+  --table-hover: color-mix(in srgb, CanvasText 10%, var(--warning-1));
+}
+
+.table-secondary {
+  color-scheme: light;
+  --table-fg: #000;
+  --th-bg: var(--secondary);
+  --table-bg: var(--secondary-3);
+  --table-bd-color: var(--secondary-5);
+  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--secondary-3));
+  --table-hover: color-mix(in srgb, CanvasText 10%, var(--secondary-3));
+}

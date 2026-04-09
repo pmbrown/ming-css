@@ -1,0 +1,47 @@
+.btn-primary {
+  --btn-fg: #fff;
+  --btn-bg: var(--primary);
+  --btn-bd-color: var(--primary-3);
+  --btn-hover: var(--primary-5);
+  --btn-outline-color: var(--primary-3);
+}
+
+.btn-success {
+  --btn-fg: #fff;
+  --btn-bg: var(--success);
+  --btn-bd-color: var(--success-3);
+  --btn-hover: var(--success-5);
+  --btn-outline-color: var(--success-3);
+}
+
+.btn-danger {
+  --btn-fg: #fff;
+  --btn-bg: var(--danger);
+  --btn-bd-color: var(--danger-2);
+  --btn-hover: var(--danger-5);
+  --btn-outline-color: var(--danger-2);
+}
+
+.btn-info {
+  --btn-fg: #000;
+  --btn-bg: var(--info);
+  --btn-bd-color: var(--info-2);
+  --btn-hover: var(--info-5);
+  --btn-outline-color: var(--info-2);
+}
+
+.btn-warning {
+  --btn-fg: #000;
+  --btn-bg: var(--warning);
+  --btn-bd-color: var(--warning-1);
+  --btn-hover: var(--warning-5);
+  --btn-outline-color: var(--warning-1);
+}
+
+.btn-secondary {
+  --btn-fg: #000;
+  --btn-bg: var(--secondary);
+  --btn-bd-color: var(--secondary-3);
+  --btn-hover: var(--secondary-5);
+  --btn-outline-color: var(--secondary-3);
+}

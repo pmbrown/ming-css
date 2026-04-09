@@ -1,0 +1,47 @@
+.card-primary, .card-link-primary {
+  color-scheme: dark;
+  --card-fg: #fff;
+  --card-bg: var(--primary);
+  --card-bd-color: var(--primary-3);
+  --card-hover: var(--primary-5);
+}
+
+.card-success, .card-link-success {
+  color-scheme: dark;
+  --card-fg: #fff;
+  --card-bg: var(--success);
+  --card-bd-color: var(--success-3);
+  --card-hover: var(--success-5);
+}
+
+.card-danger, .card-link-danger {
+  color-scheme: dark;
+  --card-fg: #fff;
+  --card-bg: var(--danger);
+  --card-bd-color: var(--danger-2);
+  --card-hover: var(--danger-5);
+}
+
+.card-info, .card-link-info {
+  color-scheme: light;
+  --card-fg: #000;
+  --card-bg: var(--info);
+  --card-bd-color: var(--info-2);
+  --card-hover: var(--info-5);
+}
+
+.card-warning, .card-link-warning {
+  color-scheme: light;
+  --card-fg: #000;
+  --card-bg: var(--warning);
+  --card-bd-color: var(--warning-1);
+  --card-hover: var(--warning-5);
+}
+
+.card-secondary, .card-link-secondary {
+  color-scheme: light;
+  --card-fg: #000;
+  --card-bg: var(--secondary);
+  --card-bd-color: var(--secondary-3);
+  --card-hover: var(--secondary-5);
+}

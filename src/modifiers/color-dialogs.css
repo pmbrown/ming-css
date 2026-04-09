@@ -1,0 +1,41 @@
+.dialog-primary {
+  color-scheme: dark;
+  --dialog-fg: #fff;
+  --dialog-bg: var(--primary);
+  --dialog-bd-color: var(--primary-3);
+}
+
+.dialog-success {
+  color-scheme: dark;
+  --dialog-fg: #fff;
+  --dialog-bg: var(--success);
+  --dialog-bd-color: var(--success-3);
+}
+
+.dialog-danger {
+  color-scheme: dark;
+  --dialog-fg: #fff;
+  --dialog-bg: var(--danger);
+  --dialog-bd-color: var(--danger-2);
+}
+
+.dialog-info {
+  color-scheme: light;
+  --dialog-fg: #000;
+  --dialog-bg: var(--info);
+  --dialog-bd-color: var(--info-2);
+}
+
+.dialog-warning {
+  color-scheme: light;
+  --dialog-fg: #000;
+  --dialog-bg: var(--warning);
+  --dialog-bd-color: var(--warning-1);
+}
+
+.dialog-secondary {
+  color-scheme: light;
+  --dialog-fg: #000;
+  --dialog-bg: var(--secondary);
+  --dialog-bd-color: var(--secondary-3);
+}

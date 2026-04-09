@@ -1,0 +1,52 @@
+.btn-group, .btn-group-column {
+  display: flex;
+  
+  :focus {
+    outline: none;
+  }
+  
+  &:where(ol, ul) {
+    list-style-type: "";
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+  
+  *, *:is(li) :is(.btn, button) {
+    border-radius: 0;
+  }
+}
+
+.btn-group {
+  *:not(:first-child) {
+    margin-inline-start: calc(var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)));
+  }
+  
+  *:first-child, *:is(li):first-child * {
+    border-start-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-end-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
+  }
+  
+  *:last-child, *:is(li):last-child * {
+    border-start-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-end-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+  }
+}
+
+.btn-group-column {
+  flex-direction: column;
+  inline-size: fit-content;
+  
+  *:not(:first-child) {
+    margin-block-start: calc(var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)));
+  }
+  
+  *:first-child, *:is(li):first-child * {
+    border-start-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-start-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+  }
+  
+  *:last-child, *:is(li):last-child * {
+    border-end-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-end-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+  }
+}

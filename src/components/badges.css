@@ -1,0 +1,24 @@
+.badge,
+[class*=badge-] {
+  color: var(--badge-fg, var(--text, CanvasText));
+  font-size: var(--badge-fs, 0.75em);
+  font-weight: var(--badge-fw);
+  text-align: center;
+  line-height: 1.1;
+  display: inline-block; 
+  position: relative;
+  inset-block-start: -0.12em;
+  padding-block: var(--badge-py, 0.375em);
+  padding-inline: var(--badge-px, 0.65em);
+  border: var(--badge-bd-width, var(--border-width, 1px)) solid var(--badge-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-radius: var(--badge-radius, var(--border-radius, 0.188rem));
+  background-color: var(--badge-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+  
+  &:is(.badge-outline) {
+    --badge-bg: var(--background, Canvas);
+  }
+  
+  &:is(.badge-pill) {
+    --badge-radius: 10rem;
+  }
+}

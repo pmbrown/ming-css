@@ -1,0 +1,41 @@
+.alert-primary {
+  color-scheme: dark;
+  --alert-fg: #fff;
+  --alert-bg: var(--primary);
+  --alert-bd-color: var(--primary-3);
+}
+
+.alert-success {
+  color-scheme: dark;
+  --alert-fg: #fff;
+  --alert-bg: var(--success);
+  --alert-bd-color: var(--success-3);
+}
+
+.alert-danger {
+  color-scheme: dark;
+  --alert-fg: #fff;
+  --alert-bg: var(--danger);
+  --alert-bd-color: var(--danger-2);
+}
+
+.alert-info {
+  color-scheme: light;
+  --alert-fg: #000;
+  --alert-bg: var(--info);
+  --alert-bd-color: var(--info-2);
+}
+
+.alert-warning {
+  color-scheme: light;
+  --alert-fg: #000;
+  --alert-bg: var(--warning);
+  --alert-bd-color: var(--warning-1);
+}
+
+.alert-secondary {
+  color-scheme: light;
+  --alert-fg: #000;
+  --alert-bg: var(--secondary);
+  --alert-bd-color: var(--secondary-3);
+}

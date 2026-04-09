@@ -1,0 +1,161 @@
+:where(button, input, optgroup, select, textarea) {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+:where(button, optgroup, select, [type=button], [type=submit], [type=reset], [type=color]),
+::file-selector-button {
+  cursor: pointer;
+}
+
+:where(button, input, optgroup, select, textarea):disabled,
+:where([aria-disabled=true]) {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+:where(optgroup, select, textarea, input:not([type=button], [type=submit], [type=reset])) {
+  color: var(--form-fg, var(--text, CanvasText));
+  font-size: var(--form-fs, inherit);
+  padding-block: var(--form-py, 0.313rem);
+  padding-inline: var(--form-px, 0.65rem);
+  border: var(--form-bd-width, var(--border-width, 1px)) solid var(--form-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-radius: var(--form-radius, var(--border-radius, 0.188em));
+  background-color: var(--form-bg, var(--background, Canvas));
+  
+  &:focus {
+    outline: var(--form-outline-width, 1.75px) solid var(--form-outline-color, color-mix(in srgb, CanvasText 40%, var(--background, Canvas)));
+    outline-offset: var(--form-outline-offset, 0);
+    
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+}
+
+:where(button, [type=button], [type=submit], [type=reset]),
+::file-selector-button, .btn {
+  color: var(--btn-fg, var(--text, CanvasText));
+  font-size: var(--btn-fs, inherit);
+  padding-block: var(--btn-py, 0.313rem);
+  padding-inline: var(--btn-px, 0.85rem);
+  border: var(--btn-bd-width, var(--border-width, 1px)) solid var(--btn-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-radius: var(--btn-radius, var(--border-radius, 0.188em));
+  background-color: var(--btn-bg, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+  -webkit-appearance: button;
+  
+  &:where(:hover, :focus),
+  &:focus:not(:focus-visible):hover {
+    background-color: var(--btn-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+  }
+  
+  &:focus {
+    outline: var(--btn-outline-width, 1.75px) solid var(--btn-outline-color, color-mix(in srgb, CanvasText 40%, var(--background, Canvas)));
+    outline-offset: var(--btn-outline-offset, 0);
+    &:not(:focus-visible) {
+      outline: none;
+      background-color: var(--btn-bg, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+    }
+  }
+  
+  &:is(a) {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+:where([type=file]) {
+  padding: 0;
+  background-color: transparent;
+}
+
+::file-selector-button {
+  font-family: inherit;
+  line-height: inherit;
+  margin-inline-end: 0.75rem;
+  border-block: none;
+  border-inline-start: none;
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}
+
+::file-selector-button:hover {
+  background-color: var(--btn-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+}
+
+:where(textarea) {
+  display: block;
+  resize: vertical;
+}
+
+:where([type=radio], [type=checkbox], [type=range], [progress]) {
+  accent-color: var(--form-accent, var(--link, revert));
+}
+
+:where(fieldset, legend) {
+  border: var(--form-bd-width, var(--border-width, 1px)) solid var(--form-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-radius: var(--form-radius, var(--border-radius, 0.188em));
+}
+
+:where(fieldset) {
+  inline-size: fit-content;
+}
+
+:where(legend) {
+  padding-block: var(--form-py, 0.313rem);
+  padding-inline: var(--form-px, 0.65rem);
+}
+
+:where([type=color]) {
+  padding: 0;
+}
+
+:where(input[type=color])::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+:where(input[type=color i])::-webkit-color-swatch {
+  border: none;
+}
+
+:where(input):autofill,
+:where(input):-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1.5rem color-mix(in srgb, CanvasText 2%, var(--background, Canvas)) inset;
+}
+
+.btn-outline {
+  --btn-bg: transparent;
+}
+
+.btn-sm {
+  --btn-fs: 0.875rem;
+  --btn-py: 0.25rem;
+  --btn-px: 0.75rem;
+}
+
+.btn-lg {
+  --btn-fs: 1.125rem;
+  --btn-py: 0.35rem;
+  --btn-px: 0.95rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  
+  input {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+  }
+  
+  button {
+    margin-inline-start: -1px;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+  }
+  
+  :focus {
+    outline: none;
+  }
+}

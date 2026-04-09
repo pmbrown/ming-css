@@ -1,0 +1,41 @@
+.form-primary {
+  --form-fg: #fff;
+  --form-bg: var(--primary);
+  --form-bd-color: var(--primary-3);
+  --form-outline-color: var(--primary-3);
+}
+
+.form-success {
+  --form-fg: #fff;
+  --form-bg: var(--success);
+  --form-bd-color: var(--success-3);
+  --form-outline-color: var(--success-3);
+}
+
+.form-danger {
+  --form-fg: #fff;
+  --form-bg: var(--danger);
+  --form-bd-color: var(--danger-2);
+  --form-outline-color: var(--danger-2);
+}
+
+.form-info {
+  --form-fg: #000;
+  --form-bg: var(--info);
+  --form-bd-color: var(--info-2);
+  --form-outline-color: var(--info-2);
+}
+
+.form-warning {
+  --form-fg: #000;
+  --form-bg: var(--warning);
+  --form-bd-color: var(--warning-1);
+  --form-outline-color: var(--warning-1);
+}
+
+.form-secondary {
+  --form-fg: #000;
+  --form-bg: var(--secondary);
+  --form-bd-color: var(--secondary-3);
+  --form-outline-color: var(--secondary-3);
+}

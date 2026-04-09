@@ -1,0 +1,55 @@
+.card, .card-link,
+[class*=card-], [class*=card-link-] {
+  color: var(--card-fg, var(--text, CanvasText));
+  max-inline-size: var(--card-width);
+  padding-block: var(--card-py, 1rem);
+  padding-inline: var(--card-px, 1rem);
+  border: var(--card-bd-width, var(--border-width, 1px)) solid var(--card-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-radius: var(--card-radius, var(--border-radius, 0.188rem));
+  background-color: var(--card-bg, var(--background, Canvas));
+  
+  :is(p, ol, ul, dl) {
+    margin-block-end: var(--card-text-mb, 0.5rem);
+  }
+  
+  :is(:last-child) {
+    margin-block-end: 0;
+  }
+  
+  img:not(:last-child) {
+    margin-block-end: calc(var(--card-text-mb, 0.5rem) + 0.25rem);
+  }
+  
+  img:last-child {
+    margin-block-start: calc(var(--card-text-mb, 0.5rem) + 0.25rem);
+  }
+}
+
+.card-link,
+[class*=card-link-] {
+  position: relative;
+  
+  a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+  
+  a:focus-visible {
+    outline: none;
+  }
+  
+  &:is(:focus-within, :hover) {
+    background-color: var(--card-hover, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+    cursor: pointer;
+    
+    img {
+      opacity: 0.85;
+    }
+  }
+  
+  &:focus-within {
+    outline: var(--card-focus, 0.188rem) solid var(--card-focus-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas)));
+  }
+}

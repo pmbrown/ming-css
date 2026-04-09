@@ -1,0 +1,25 @@
+.popover,
+[class*=popover-] {
+  color: var(--popover-fg, var(--text, CanvasText));
+  block-size: var(--popover-block, fit-content);
+  max-block-size: var(--popover-height, calc(100dvh - 2rem));
+  inline-size: var(--popover-inline, calc(100% - 6px - 2em));
+  max-inline-size: var(--popover-width, fit-content);
+  margin: auto;
+  margin-block-start: var(--popover-top, 1rem);
+  padding-block: var(--popover-py, 1rem);
+  padding-inline: var(--popover-px, 1rem);
+  border: var(--popover-bd-width, var(--border-width, 1px)) solid var(--popover-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-radius: var(--popover-radius, var(--border-radius, 0.188rem));
+  background-color: var(--popover-bg, var(--background, Canvas));
+  overflow: auto;
+  overscroll-behavior: contain;
+  
+  :last-child {
+    margin-block-end: 0;
+  }
+  
+  &::backdrop {
+    background-color: var(--popover-backdrop, transparent);
+  }
+}
