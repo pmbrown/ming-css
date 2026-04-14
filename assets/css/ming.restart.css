@@ -1,4 +1,4 @@
-/*! Ming-CSS (restart) v0.1.0 | Copyright (c) 2026 Phil Brown | MIT licensed */
+/*! Ming-CSS (restart) v0.1.1 | Copyright (c) 2026 Phil Brown | MIT licensed */
 :where(html) {
   --text: light-dark(#000, #fff);
   --background: light-dark(#eaecee, #1f2428);
@@ -39,7 +39,7 @@
     color: var(--link-visited, revert);
   }
   &:focus-visible {
-    outline: var(--link-focus-width, 1px) solid var(--link-focus-color, var(--link, light-dark(#1c3db5, #9fbfdf)));
+    outline: var(--link-focus-width, 1px) solid var(--link-focus-color, var(--link, revert));
     border-radius: var(--link-focus-radius, 0.125em);
   }
   &:is(:hover, :focus) {
@@ -206,6 +206,14 @@
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 :where(button, input, optgroup, select, textarea) {

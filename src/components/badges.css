@@ -19,6 +19,7 @@
   }
   
   &:is(.badge-pill) {
+    --badge-px: 1em;
     --badge-radius: 10rem;
   }
 }

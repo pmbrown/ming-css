@@ -32,7 +32,7 @@
   }
   
   &:focus-visible {
-    outline: var(--link-focus-width, 1px) solid var(--link-focus-color, var(--link, light-dark(#1c3db5, #9fbfdf)));
+    outline: var(--link-focus-width, 1px) solid var(--link-focus-color, var(--link, revert));
     border-radius: var(--link-focus-radius, 0.125em);
   }
   
@@ -207,4 +207,12 @@
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.light {
+  color-scheme: light;
+}
+  
+.dark {
+  color-scheme: dark;
 }

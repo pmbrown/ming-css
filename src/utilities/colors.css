@@ -1,11 +1,3 @@
-.light {
-  color-scheme: light;
-}
-  
-.dark {
-  color-scheme: dark;
-}
-
 .fg-color,
 [class*=fg-] {
   color: var(--fg);

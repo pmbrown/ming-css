@@ -1,4 +1,4 @@
-/*! Ming-CSS (mono) v0.1.0 | Copyright (c) 2026 Phil Brown | MIT licensed */
+/*! Ming-CSS (mono) v0.1.1 | Copyright (c) 2026 Phil Brown | MIT licensed */
 :where(html) {
   --text: light-dark(#000, #fff);
   --background: light-dark(#eaecee, #1f2428);
@@ -39,7 +39,7 @@
     color: var(--link-visited, revert);
   }
   &:focus-visible {
-    outline: var(--link-focus-width, 1px) solid var(--link-focus-color, var(--link, light-dark(#1c3db5, #9fbfdf)));
+    outline: var(--link-focus-width, 1px) solid var(--link-focus-color, var(--link, revert));
     border-radius: var(--link-focus-radius, 0.125em);
   }
   &:is(:hover, :focus) {
@@ -206,6 +206,14 @@
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 :where(button, input, optgroup, select, textarea) {
@@ -534,6 +542,7 @@ dialog[open]:is(.alert, [class*=alert-]) {
     --badge-bg: var(--background, Canvas);
   }
   &:is(.badge-pill) {
+    --badge-px: 1em;
     --badge-radius: 10rem;
   }
 }
@@ -548,7 +557,7 @@ dialog[open]:is(.alert, [class*=alert-]) {
     margin-block-end: 0;
     padding-inline-start: 0;
   }
-  *, *:is(li) :is(.btn, button) {
+  *, *:is(li) :is(.btn, button, [type=button], [type=submit], [type=reset]) {
     border-radius: 0;
   }
 }
@@ -631,7 +640,7 @@ dialog[open]:is(.alert, [class*=alert-]) {
 }
 
 details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
-  margin-block-end: var(--dropdown-mb, 1rem);
+  margin-block-end: var(--dropdown-mb);
   summary {
     list-style-type: "";
     position: relative;
@@ -838,14 +847,6 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   &::backdrop {
     background-color: var(--popover-backdrop, transparent);
   }
-}
-
-.light {
-  color-scheme: light;
-}
-
-.dark {
-  color-scheme: dark;
 }
 
 .fg-color,
@@ -1104,7 +1105,7 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   border-block-start-style: solid;
 }
 
-#theme-switch {
+.theme-switch {
   --btn-px: 0.65em;
   &:before {
     display: inline-block;
@@ -1116,12 +1117,12 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   }
 }
 
-[style="color-scheme: light;"] #theme-switch:before {
+[style="color-scheme: light;"] .theme-switch:before {
   --svg: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m7.47 0v2.26h1.15v-2.26zm-4.9 2.19-0.812 0.8 1.62 1.6 0.812-0.8zm10.8 0-1.62 1.6 0.812 0.8 1.62-1.6zm-5.29 1.25s-4.59 0-4.59 4.52c0 4.52 4.59 4.52 4.59 4.52s4.59 0 4.59-4.52c0-4.52-4.59-4.52-4.59-4.52zm5.67 3.92v1.13h2.3v-1.13zm-13.7 0.0243v1.13h2.3v-1.13zm3.01 4-1.62 1.6 0.812 0.8 1.62-1.6zm9.99 0-0.812 0.8 1.62 1.6 0.812-0.8zm-5.54 2.36v2.26h1.15v-2.26z'/></svg>");
   content: ""/"Light ";
 }
 
-[style="color-scheme: dark;"] #theme-switch:before {
+[style="color-scheme: dark;"] .theme-switch:before {
   --svg: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m5.27 1c-0.533 0.0926-0.946 0.529-1.39 0.815-1.17 0.88-1.95 2.19-2.46 3.54-0.777 2.03-0.429 4.41 0.861 6.16 1.41 1.98 3.67 3.56 6.18 3.49 1.98-0.0388 3.86-0.991 5.28-2.33 0.48-0.565 0.971-1.16 1.27-1.84 0.089-0.435-0.481-0.742-0.809-0.456-1.61 0.937-3.67 1.22-5.37 0.365-1.52-0.764-2.79-2.04-3.55-3.55-0.871-1.73-0.56-3.83 0.411-5.45 0.187-0.304-0.0437-0.726-0.4-0.734z'/></svg>");
   content: ""/"Dark ";
 }

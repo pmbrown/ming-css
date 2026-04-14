@@ -1,5 +1,5 @@
 details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
-  margin-block-end: var(--dropdown-mb, 1rem);
+  margin-block-end: var(--dropdown-mb);
   
   summary {
     list-style-type: "";

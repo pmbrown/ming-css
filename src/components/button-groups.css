@@ -11,7 +11,7 @@
     padding-inline-start: 0;
   }
   
-  *, *:is(li) :is(.btn, button) {
+  *, *:is(li) :is(.btn, button, [type=button], [type=submit], [type=reset]) {
     border-radius: 0;
   }
 }
