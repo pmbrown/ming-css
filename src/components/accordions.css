@@ -1,9 +1,10 @@
 .accordion,
 [class*=accordion-] {
+  --accordion-inner: calc(var(--accordion-radius, 0.188rem) - var(--accordion-bd-width, 1px));
   color: var(--accordion-fg, var(--text, CanvasText));
   margin-block-end: var(--accordion-mb, 1rem);
-  border: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--accordion-radius, var(--border-radius, 0.188rem));
+  border: var(--accordion-bd-width, 1px) solid var(--accordion-bd-color, var(--surf-3));
+  border-radius: var(--accordion-radius, 0.188rem);
   background-color: var(--accordion-bg, var(--background, Canvas));
   
   details {
@@ -30,6 +31,11 @@
         inset-block-start: var(--accordion-ico-top, 0.75rem);
         inset-inline-end: var(--accordion-ico-right, 1rem);
       }
+      
+      &:focus-visible {
+        outline: none;
+        background-color: var(--accordion-bg-focus, var(--surf-1));
+      }
     }
     
     summary::-webkit-details-marker {
@@ -37,9 +43,9 @@
     }
     
     :is([open] summary) {
-        --svg: url("data:image/svg+xml,<svg viewBox='0 0 8 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m4 6 4 4-8 1e-6z'/></svg>");
+      --svg: url("data:image/svg+xml,<svg viewBox='0 0 8 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m4 6 4 4-8 1e-6z'/></svg>");
       margin-block-end: 0;
-      border-block-end: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+      border-block-end: var(--accordion-bd-width, 1px) solid var(--accordion-bd-color, var(--surf-3));
     }
     
     :last-child {
@@ -48,9 +54,19 @@
   }
   
   :not(:first-child) summary {
-    border-block-start: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border-block-start: var(--accordion-bd-width, 1px) solid var(--accordion-bd-color, var(--surf-3));
   }
   
+  details:first-child summary {
+    border-start-start-radius: var(--accordion-inner);
+    border-start-end-radius: var(--accordion-inner);
+  }
+
+  details:last-child summary {
+    border-end-start-radius: var(--accordion-inner);
+    border-end-end-radius: var(--accordion-inner);
+  }
+   
   summary, [open]::details-content {
     padding-block: var(--accordion-py, 0.5rem);
     padding-inline: var(--accordion-px, 1rem);

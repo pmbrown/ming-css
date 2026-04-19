@@ -1,10 +1,13 @@
-/*! Ming-CSS (mono) v0.1.1 | Copyright (c) 2026 Phil Brown | MIT licensed */
+/*! Ming-CSS (mono) v0.1.2 | Copyright (c) 2026 Phil Brown | MIT licensed */
 :where(html) {
   --text: light-dark(#000, #fff);
-  --background: light-dark(#eaecee, #1f2428);
+  --background: light-dark(#f1f2f4, #1f2428);
   --link: light-dark(#1c3db5, #9fbfdf);
   --link-visited: light-dark(#4f6fe3, #b3cce6);
   --link-hover: light-dark(#385de0, #c6d8ec);
+  --surf-1: color-mix(in srgb, CanvasText 5%, var(--background));
+  --surf-2: color-mix(in srgb, CanvasText 10%, var(--background));
+  --surf-3: color-mix(in srgb, CanvasText 20%, var(--background));
 }
 
 :where(:not([popover], dialog)) {
@@ -140,7 +143,7 @@
   padding-block: 0.75rem;
   padding-inline: 1rem;
   margin-block-end: var(--blockquote-mb, 1rem);
-  border: var(--blockquote-bd-width, var(--border-width, 1px)) solid var(--blockquote-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border: var(--blockquote-bd-width, 1px) solid var(--blockquote-bd-color, var(--surf-3));
   border-inline-start-width: var(--blockquote-bd-start-width, 10px);
   background-color: var(--blockquote-bg, var(--background, Canvas));
   p {
@@ -166,8 +169,11 @@
   overflow: auto;
   padding: var(--pre-pad, 1rem);
   margin-block-end: var(--pre-mb, 1rem);
-  border: var(--pre-bd-width, var(--border-width, 1px)) solid var(--pre-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  background-color: var(--pre-bg, color-mix(in srgb, CanvasText 3%, var(--background, Canvas)));
+  border: var(--pre-bd-width, 1px) solid var(--pre-bd-color, var(--surf-3));
+  background-color: var(--pre-bg, var(--surf-1));
+  &:focus-visible {
+    outline: 1px solid var(--pre-bd-color, var(--surf-3));
+  }
 }
 
 :where(figure) {
@@ -183,7 +189,7 @@
 :where(hr) {
   margin-block-end: var(--hr-mb, 1rem);
   border: none;
-  border-block-start: var(--hr-width, 1px) solid var(--hr-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-block-start: var(--hr-width, 1px) solid var(--hr-color, var(--surf-3));
 }
 
 :where(img, svg, video, audio, iframe, embed, object) {
@@ -208,14 +214,6 @@
   white-space: nowrap;
 }
 
-.light {
-  color-scheme: light;
-}
-
-.dark {
-  color-scheme: dark;
-}
-
 :where(button, input, optgroup, select, textarea) {
   font-family: inherit;
   line-height: inherit;
@@ -237,11 +235,11 @@
   font-size: var(--form-fs, inherit);
   padding-block: var(--form-py, 0.313rem);
   padding-inline: var(--form-px, 0.65rem);
-  border: var(--form-bd-width, var(--border-width, 1px)) solid var(--form-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--form-radius, var(--border-radius, 0.188em));
+  border: var(--form-bd-width, 1px) solid var(--form-bd-color, var(--surf-3));
+  border-radius: var(--form-radius, 0.188em);
   background-color: var(--form-bg, var(--background, Canvas));
   &:focus {
-    outline: var(--form-outline-width, 1.75px) solid var(--form-outline-color, color-mix(in srgb, CanvasText 40%, var(--background, Canvas)));
+    outline: var(--form-outline-width, 1.75px) solid var(--form-outline-color, var(--surf-3));
     outline-offset: var(--form-outline-offset, 0);
     &:not(:focus-visible) {
       outline: none;
@@ -255,20 +253,20 @@
   font-size: var(--btn-fs, inherit);
   padding-block: var(--btn-py, 0.313rem);
   padding-inline: var(--btn-px, 0.85rem);
-  border: var(--btn-bd-width, var(--border-width, 1px)) solid var(--btn-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--btn-radius, var(--border-radius, 0.188em));
-  background-color: var(--btn-bg, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+  border: var(--btn-bd-width, 1px) solid var(--btn-bd-color, var(--surf-3));
+  border-radius: var(--btn-radius, 0.188em);
+  background-color: var(--btn-bg, var(--surf-1));
   -webkit-appearance: button;
   &:where(:hover, :focus),
   &:focus:not(:focus-visible):hover {
-    background-color: var(--btn-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+    background-color: var(--btn-hover, var(--surf-2));
   }
   &:focus {
-    outline: var(--btn-outline-width, 1.75px) solid var(--btn-outline-color, color-mix(in srgb, CanvasText 40%, var(--background, Canvas)));
+    outline: var(--btn-outline-width, 1.75px) solid var(--btn-outline-color, var(--surf-3));
     outline-offset: var(--btn-outline-offset, 0);
     &:not(:focus-visible) {
       outline: none;
-      background-color: var(--btn-bg, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+      background-color: var(--btn-bg, var(--surf-1));
     }
   }
   &:is(a) {
@@ -294,7 +292,7 @@
 }
 
 ::file-selector-button:hover {
-  background-color: var(--btn-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+  background-color: var(--btn-hover, var(--surf-2));
 }
 
 :where(textarea) {
@@ -307,8 +305,8 @@
 }
 
 :where(fieldset, legend) {
-  border: var(--form-bd-width, var(--border-width, 1px)) solid var(--form-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--form-radius, var(--border-radius, 0.188em));
+  border: var(--form-bd-width, 1px) solid var(--form-bd-color, var(--surf-3));
+  border-radius: var(--form-radius, 0.188em);
 }
 
 :where(fieldset) {
@@ -388,16 +386,16 @@
     padding-block: var(--table-py, 0.35rem);
     padding-inline: var(--table-px, 0.75rem);
     background-color: var(--caption-bg, var(--table-bg, var(--background, Canvas)));
-    border: var(--table-bd-width, var(--border-width, 1px)) solid var(--table-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border: var(--table-bd-width, 1px) solid var(--table-bd-color, var(--surf-3));
     border-block-end: none;
   }
   th {
     color: var(--th-fg, var(--table-fg, var(--text, CanvasText)));
-    background-color: var(--th-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+    background-color: var(--th-bg, var(--surf-1));
   }
   thead, tbody, tfoot, tr, td, th {
     vertical-align: top;
-    border: var(--table-bd-width, var(--border-width, 1px)) solid var(--table-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border: var(--table-bd-width, 1px) solid var(--table-bd-color, var(--surf-3));
   }
   th, td {
     padding-block: var(--table-py, 0.4rem);
@@ -421,10 +419,11 @@
 
 .accordion,
 [class*=accordion-] {
+  --accordion-inner: calc(var(--accordion-radius, 0.188rem) - var(--accordion-bd-width, 1px));
   color: var(--accordion-fg, var(--text, CanvasText));
   margin-block-end: var(--accordion-mb, 1rem);
-  border: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--accordion-radius, var(--border-radius, 0.188rem));
+  border: var(--accordion-bd-width, 1px) solid var(--accordion-bd-color, var(--surf-3));
+  border-radius: var(--accordion-radius, 0.188rem);
   background-color: var(--accordion-bg, var(--background, Canvas));
   details {
     margin-block-end: 0;
@@ -447,6 +446,10 @@
         inset-block-start: var(--accordion-ico-top, 0.75rem);
         inset-inline-end: var(--accordion-ico-right, 1rem);
       }
+      &:focus-visible {
+        outline: none;
+        background-color: var(--accordion-bg-focus, var(--surf-1));
+      }
     }
     summary::-webkit-details-marker {
       display: none;
@@ -454,14 +457,22 @@
     :is([open] summary) {
       --svg: url("data:image/svg+xml,<svg viewBox='0 0 8 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m4 6 4 4-8 1e-6z'/></svg>");
       margin-block-end: 0;
-      border-block-end: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+      border-block-end: var(--accordion-bd-width, 1px) solid var(--accordion-bd-color, var(--surf-3));
     }
     :last-child {
       margin-block-end: 0;
     }
   }
   :not(:first-child) summary {
-    border-block-start: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border-block-start: var(--accordion-bd-width, 1px) solid var(--accordion-bd-color, var(--surf-3));
+  }
+  details:first-child summary {
+    border-start-start-radius: var(--accordion-inner);
+    border-start-end-radius: var(--accordion-inner);
+  }
+  details:last-child summary {
+    border-end-start-radius: var(--accordion-inner);
+    border-end-end-radius: var(--accordion-inner);
   }
   summary, [open]::details-content {
     padding-block: var(--accordion-py, 0.5rem);
@@ -478,9 +489,9 @@
   margin-block-end: var(--alert-mb, 1rem);
   padding-block: var(--alert-py, 0.75rem);
   padding-inline: var(--alert-px, 1rem);
-  border: var(--alert-bd-width, var(--border-width, 1px)) solid var(--alert-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--alert-radius, var(--border-radius, 0.188rem));
-  background-color: var(--alert-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+  border: var(--alert-bd-width, 1px) solid var(--alert-bd-color, var(--surf-3));
+  border-radius: var(--alert-radius, 0.188rem);
+  background-color: var(--alert-bg, var(--surf-1));
   :last-of-type:is(p, ol, ul, dl) {
     margin-block-end: 0;
   }
@@ -493,30 +504,17 @@ dialog[open]:is(.alert, [class*=alert-]) {
   margin: initial;
   margin-block-end: var(--alert-mb, 1rem);
   padding-inline-end: 3rem;
+  &:focus-visible {
+    outline: 1px solid var(--alert-bd-color, var(--surf-3));
+  }
   .close-alert {
-    --ico: var(--alert-fg, CurrentColor);
-    --svg: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2.47 3.53 1.06-1.06 4.47 4.47 4.47-4.47 1.06 1.06-4.47 4.47 4.47 4.47-1.06 1.06-4.47-4.47-4.47 4.47-1.06-1.06 4.47-4.47z'/></svg>");
+    --btn-bg: transparent;
+    --btn-hover: transparent;
+    --btn-bd-color: transparent;
+    --btn-outline-color: color-mix(in srgb, CanvasText 33%, transparent);
     position: absolute;
-    inset-block-start: 0.5rem;
-    inset-inline-end: 0.75rem;
-    padding-block: 0.15rem;
-    padding-inline: 0.475rem;
-    border-color: transparent;
-    background-color: transparent;
-    &:focus-visible {
-      --ico: #fff;
-      outline: none;
-      background-color: red;
-    }
-    &:before {
-      display: inline-block;
-      content: "";
-      block-size: 1em;
-      inline-size: 1em;
-      vertical-align: -0.15em;
-      background-color: var(--ico);
-      mask: var(--svg) no-repeat;
-    }
+    inset-block-start: 0.375rem;
+    inset-inline-end: 0.5rem;
   }
   p {
     padding-inline-end: 2.5rem;
@@ -535,9 +533,9 @@ dialog[open]:is(.alert, [class*=alert-]) {
   inset-block-start: -0.12em;
   padding-block: var(--badge-py, 0.375em);
   padding-inline: var(--badge-px, 0.65em);
-  border: var(--badge-bd-width, var(--border-width, 1px)) solid var(--badge-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--badge-radius, var(--border-radius, 0.188rem));
-  background-color: var(--badge-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+  border: var(--badge-bd-width, 1px) solid var(--badge-bd-color, var(--surf-3));
+  border-radius: var(--badge-radius, 0.188rem);
+  background-color: var(--badge-bg, var(--surf-1));
   &:is(.badge-outline) {
     --badge-bg: var(--background, Canvas);
   }
@@ -564,15 +562,15 @@ dialog[open]:is(.alert, [class*=alert-]) {
 
 .btn-group {
   *:not(:first-child) {
-    margin-inline-start: calc(var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)));
+    margin-inline-start: calc(var(--btn-bd-width, 1px) - var(--btn-bd-width, 1px) - var(--btn-bd-width, 1px));
   }
   *:first-child, *:is(li):first-child * {
-    border-start-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
-    border-end-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-start-start-radius: var(--btn-radius, 0.188em);
+    border-end-start-radius: var(--btn-radius, 0.188em);
   }
   *:last-child, *:is(li):last-child * {
-    border-start-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
-    border-end-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-start-end-radius: var(--btn-radius, 0.188em);
+    border-end-end-radius: var(--btn-radius, 0.188em);
   }
 }
 
@@ -580,15 +578,15 @@ dialog[open]:is(.alert, [class*=alert-]) {
   flex-direction: column;
   inline-size: fit-content;
   *:not(:first-child) {
-    margin-block-start: calc(var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)));
+    margin-block-start: calc(var(--btn-bd-width, 1px) - var(--btn-bd-width, 1px) - var(--btn-bd-width, 1px));
   }
   *:first-child, *:is(li):first-child * {
-    border-start-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
-    border-start-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-start-start-radius: var(--btn-radius, 0.188em);
+    border-start-end-radius: var(--btn-radius, 0.188em);
   }
   *:last-child, *:is(li):last-child * {
-    border-end-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
-    border-end-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-end-start-radius: var(--btn-radius, 0.188em);
+    border-end-end-radius: var(--btn-radius, 0.188em);
   }
 }
 
@@ -598,8 +596,8 @@ dialog[open]:is(.alert, [class*=alert-]) {
   max-inline-size: var(--card-width);
   padding-block: var(--card-py, 1rem);
   padding-inline: var(--card-px, 1rem);
-  border: var(--card-bd-width, var(--border-width, 1px)) solid var(--card-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--card-radius, var(--border-radius, 0.188rem));
+  border: var(--card-bd-width, 1px) solid var(--card-bd-color, var(--surf-3));
+  border-radius: var(--card-radius, 0.188rem);
   background-color: var(--card-bg, var(--background, Canvas));
   :is(p, ol, ul, dl) {
     margin-block-end: var(--card-text-mb, 0.5rem);
@@ -628,18 +626,19 @@ dialog[open]:is(.alert, [class*=alert-]) {
     outline: none;
   }
   &:is(:focus-within, :hover) {
-    background-color: var(--card-hover, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+    background-color: var(--card-hover, var(--surf-1));
     cursor: pointer;
     img {
       opacity: 0.85;
     }
   }
   &:focus-within {
-    outline: var(--card-focus, 0.188rem) solid var(--card-focus-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas)));
+    outline: var(--card-focus, 0.188rem) solid var(--card-focus-color, var(--surf-3));
   }
 }
 
 details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
+  --dropdown-inner: calc(var(--dropdown-radius, 0.188rem) - var(--dropdown-bd-width, 1px));
   margin-block-end: var(--dropdown-mb);
   summary {
     list-style-type: "";
@@ -673,8 +672,8 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
     inline-size: var(--dropdown-min, fit-content);
     max-inline-size: var(--dropdown-max, 14rem);
     margin-block-start: var(--dropdown-top, 0.25rem);
-    border: var(--dropdown-bd-width, var(--border-width, 1px)) solid var(--dropdown-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-    border-radius: var(--dropdown-radius, var(--border-radius, 0.188rem));
+    border: var(--dropdown-bd-width, 1px) solid var(--dropdown-bd-color, var(--surf-3));
+    border-radius: var(--dropdown-radius, 0.188rem);
     background-color: var(--dropdown-bg, var(--background, Canvas));
     z-index: 2;
   }
@@ -701,22 +700,22 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
       background-color: var(--dropdown-bg, var(--background, Canvas));
       &:is(:hover, :focus) {
         outline: none;
-        background-color: var(--dropdown-bg-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+        background-color: var(--dropdown-bg-hover, var(--surf-2));
       }
     }
     &:not(ul, ol) :is(a, button):not(:first-child),
     &:is(ul, ol) li:not(:first-child) {
-      border-block-start: var(--dropdown-bd-width, var(--border-width, 1px)) solid var(--dropdown-bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas)));
+      border-block-start: var(--dropdown-bd-width, 1px) solid var(--dropdown-bd-color, var(--surf-3));
     }
     &:not(ul, ol) :first-child:is(a, button),
     &:is(ul, ol) li:first-child *:is(a, button) {
-      border-start-start-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
-      border-start-end-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+      border-start-start-radius: var(--dropdown-inner);
+      border-start-end-radius: var(--dropdown-inner);
     }
     &:not(ul, ol) :last-child:is(a, button),
     &:is(ul, ol) li:last-child *:is(a, button) {
-      border-end-start-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
-      border-end-end-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+      border-end-start-radius: var(--dropdown-inner);
+      border-end-end-radius: var(--dropdown-inner);
     }
   }
   .dropdown-body, [class*=dropdown-body-] {
@@ -736,6 +735,8 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
 
 .dialog,
 [class*=dialog-] {
+  --backdrop-light: color-mix(in srgb, #000 10%, transparent);
+  --backdrop-dark: color-mix(in srgb, #000 40%, transparent);
   color: var(--dialog-fg, var(--text, CanvasText));
   block-size: var(--dialog-block, fit-content);
   max-block-size: var(--dialog-height, calc(100dvh - 2rem));
@@ -745,39 +746,51 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   margin-block-start: var(--dialog-top, 1rem);
   padding-block: var(--dialog-py, 1rem);
   padding-inline: var(--dialog-px, 1rem);
-  border: var(--dialog-bd-width, var(--border-width, 1px)) solid var(--dialog-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--dialog-radius, var(--border-radius, 0.188rem));
+  border: var(--dialog-bd-width, 1px) solid var(--dialog-bd-color, var(--surf-3));
+  border-radius: var(--dialog-radius, 0.188rem);
   background-color: var(--dialog-bg, var(--background, Canvas));
   overflow: auto;
   overscroll-behavior: contain;
-  :last-child {
+  &:focus-visible {
+    outline: 1px solid var(--dialog-bd-color, var(--surf-3));
+  }
+  :last-child:is(p, ol, ul, dl),
+  :last-of-type:is(p, ol, ul, dl):has(+ .close-dialog) {
     margin-block-end: 0;
   }
-  &::backdrop {
-    background-color: var(--dialog-backdrop, color-mix(in srgb, black 50%, transparent));
+  :first-child {
+    margin-inline-end: var(--close-margin, initial);
+  }
+  &:has(.close-dialog) {
+    --close-margin: 5rem;
+    &:has(.ico-btn) {
+      --close-margin: 3rem;
+    }
   }
   .close-dialog {
-    position: fixed;
-    inset: 0;
-    display: block;
-    content: "";
-    z-index: -1;
+    position: absolute;
+    inset-block-start: calc(var(--dialog-py, 1rem) * 0.75);
+    inset-inline-end: calc(var(--dialog-px, 1rem) * 0.75);
+  }
+  &::backdrop {
+    background-color: var(--dialog-backdrop, light-dark(var(--backdrop-light), var(--backdrop-dark)));
   }
 }
 
 .list-group, .list-links,
 [class*=list-group-], [class*=list-links-] {
+  --list-group-inner: calc(var(--list-group-radius, 0.188rem) - var(--list-group-bd-width, 1px));
   color: var(--list-group-fg, CanvasText);
   max-inline-size: var(--list-group-width);
-  border: var(--list-group-bd-width, var(--border-width, 1px)) solid var(--list-group-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--list-group-radius, var(--border-radius, 0.188rem));
+  border: var(--list-group-bd-width, 1px) solid var(--list-group-bd-color, var(--surf-3));
+  border-radius: var(--list-group-radius, 0.188rem);
   background-color: var(--list-group-bg, var(--background, Canvas));
   &:is(ul, ol) {
     list-style-type: "";
     padding-inline-start: 0;
   }
   *:not(:first-child) {
-    border-block-start: var(--list-group-bd-width, var(--border-width, 1px)) solid var(--list-group-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border-block-start: var(--list-group-bd-width, 1px) solid var(--list-group-bd-color, var(--surf-3));
   }
   &:is(ol) {
     counter-reset: ol-list;
@@ -808,19 +821,19 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
       padding-block: var(--list-group-py, 0.5rem);
       padding-inline: var(--list-group-px, 0.75rem);
       &:is(:hover, :focus) {
-        background-color: var(--list-group-bg-hover, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+        background-color: var(--list-group-bg-hover, var(--surf-1));
       }
       &:focus-visible {
         outline: none;
       }
     }
     *:first-child a:is(:hover, :focus) {
-      border-start-start-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
-      border-start-end-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+      border-start-start-radius: var(--list-group-inner);
+      border-start-end-radius: var(--list-group-inner);
     }
     *:last-child a:is(:hover, :focus) {
-      border-end-start-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
-      border-end-end-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+      border-end-start-radius: var(--list-group-inner);
+      border-end-end-radius: var(--list-group-inner);
     }
   }
 }
@@ -836,25 +849,46 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   margin-block-start: var(--popover-top, 1rem);
   padding-block: var(--popover-py, 1rem);
   padding-inline: var(--popover-px, 1rem);
-  border: var(--popover-bd-width, var(--border-width, 1px)) solid var(--popover-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--popover-radius, var(--border-radius, 0.188rem));
+  border: var(--popover-bd-width, 1px) solid var(--popover-bd-color, var(--surf-3));
+  border-radius: var(--popover-radius, 0.188rem);
   background-color: var(--popover-bg, var(--background, Canvas));
   overflow: auto;
   overscroll-behavior: contain;
-  :last-child {
+  :last-child:is(p, ol, ul, dl),
+  :last-of-type:is(p, ol, ul, dl):has(+ .close-popover) {
     margin-block-end: 0;
+  }
+  :first-child {
+    margin-inline-end: var(--close-margin, initial);
+  }
+  &:has(.close-popover) {
+    --close-margin: 5rem;
+    &:has(.ico-btn) {
+      --close-margin: 3rem;
+    }
+  }
+  .close-popover {
+    position: absolute;
+    inset-block-start: calc(var(--popover-py, 1rem) * 0.75);
+    inset-inline-end: calc(var(--popover-px, 1rem) * 0.75);
   }
   &::backdrop {
     background-color: var(--popover-backdrop, transparent);
   }
 }
 
-.fg-color,
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
 [class*=fg-] {
   color: var(--fg);
 }
 
-.bg-color,
 [class*=bg-] {
   color: var(--fg);
   background-color: var(--bg);
@@ -1125,4 +1159,47 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
 [style="color-scheme: dark;"] .theme-switch:before {
   --svg: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m5.27 1c-0.533 0.0926-0.946 0.529-1.39 0.815-1.17 0.88-1.95 2.19-2.46 3.54-0.777 2.03-0.429 4.41 0.861 6.16 1.41 1.98 3.67 3.56 6.18 3.49 1.98-0.0388 3.86-0.991 5.28-2.33 0.48-0.565 0.971-1.16 1.27-1.84 0.089-0.435-0.481-0.742-0.809-0.456-1.61 0.937-3.67 1.22-5.37 0.365-1.52-0.764-2.79-2.04-3.55-3.55-0.871-1.73-0.56-3.83 0.411-5.45 0.187-0.304-0.0437-0.726-0.4-0.734z'/></svg>");
   content: ""/"Dark ";
+}
+
+:where(html) {
+  --ico-close: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2.47 3.53 1.06-1.06 4.47 4.47 4.47-4.47 1.06 1.06-4.47 4.47 4.47 4.47-1.06 1.06-4.47-4.47-4.47 4.47-1.06-1.06 4.47-4.47z'/></svg>");
+  --ico-search: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m11.3 10.1a5.69 5.69 0 1 0-1.22 1.22h-8.75e-4q0.0385 0.0525 0.0858 0.101l3.37 3.37a0.875 0.875 0 0 0 1.24-1.24l-3.37-3.37a0.875 0.875 0 0 0-0.101-0.0875zm0.226-3.36a4.81 4.81 0 1 1-9.62 0 4.81 4.81 0 0 1 9.62 00'/></svg>");
+  --ico-menu: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2 2.5v1.5h12v-1.5h-12zm0 4.75v1.5h12v-1.5h-12zm0 4.75v1.5h12v-1.5h-12z'/></svg>");
+}
+
+:is(.ico, .ico-b, .ico-btn):before, .ico-a:after {
+  display: inline-block;
+  content: "";
+  block-size: var(--ico-xy, 1em);
+  inline-size: var(--ico-xy, 1em);
+  vertical-align: var(--ico-va, -0.145em);
+  background-color: var(--ico, CurrentColor);
+  mask: var(--svg) no-repeat;
+  opacity: var(--ico-op, 1);
+}
+
+.ico-b:before {
+  margin-inline-end: var(--ico-me, 0.2666666667em);
+}
+
+.ico-a:after {
+  --ico-va: -.155em;
+  margin-inline-start: var(--ico-ms, 0.2666666667em);
+}
+
+.ico-btn {
+  --ico-va: -.115em;
+  --btn-px: 0.65em;
+}
+
+.ico-close {
+  --svg: var(--ico-close);
+}
+
+.ico-search {
+  --svg: var(--ico-search);
+}
+
+.ico-menu {
+  --svg: var(--ico-menu);
 }

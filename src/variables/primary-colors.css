@@ -1,0 +1,43 @@
+:where(html) {
+  --primary: #2d2d86;
+  --primary-1: color-mix(in srgb, var(--primary), #fff 25%);
+  --primary-2: color-mix(in srgb, var(--primary), #fff 10%);
+  --primary-3: var(--primary);
+  --primary-4: color-mix(in srgb, var(--primary), #000 20%);
+  --primary-5: color-mix(in srgb, var(--primary), #000 40%);
+  
+  --success: #196719;
+  --success-1: color-mix(in srgb, var(--success), #fff 25%);
+  --success-2: color-mix(in srgb, var(--success), #fff 10%);
+  --success-3: var(--success);
+  --success-4: color-mix(in srgb, var(--success), #000 20%);
+  --success-5: color-mix(in srgb, var(--success), #000 35%);
+  
+  --danger: #961d1d;
+  --danger-1: color-mix(in srgb, var(--danger), #fff 25%);
+  --danger-2: color-mix(in srgb, var(--danger), #fff 12%);
+  --danger-3: var(--danger);
+  --danger-4: color-mix(in srgb, var(--danger), #000 15%);
+  --danger-5: color-mix(in srgb, var(--danger), #000 30%);
+  
+  --info: #00ffff;
+  --info-1: color-mix(in srgb, var(--info), #fff 50%);
+  --info-2: color-mix(in srgb, var(--info), #fff 35%);
+  --info-3: var(--info);
+  --info-4: color-mix(in srgb, var(--info), #000 8%);
+  --info-5: color-mix(in srgb, var(--info), #000 16%);
+  
+  --warning: #ffd700;
+  --warning-1: color-mix(in srgb, var(--warning), #fff 45%);
+  --warning-2: color-mix(in srgb, var(--warning), #fff 25%);
+  --warning-3: var(--warning);
+  --warning-4: color-mix(in srgb, var(--warning), #000 8%);
+  --warning-5: color-mix(in srgb, var(--warning), #000 15%);
+  
+  --secondary: #b3b3b3;
+  --secondary-1: color-mix(in srgb, var(--secondary), #fff 40%);
+  --secondary-2: color-mix(in srgb, var(--secondary), #fff 25%);
+  --secondary-3: var(--secondary);
+  --secondary-4: color-mix(in srgb, var(--secondary), #000 10%);
+  --secondary-5: color-mix(in srgb, var(--secondary), #000 20%);
+}

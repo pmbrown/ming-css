@@ -2,16 +2,16 @@
   color-scheme: dark;
   --dropdown-fg: #fff;
   --dropdown-bg: var(--primary);
-  --dropdown-bd-color: var(--primary-3);
-  --dropdown-bg-hover: var(--primary-5);
+  --dropdown-bd-color: var(--primary-2);
+  --dropdown-bg-hover: var(--primary-4);
 }
 
 .dropdown-success, .dropdown-body-success {
   color-scheme: dark;
   --dropdown-fg: #fff;
   --dropdown-bg: var(--success);
-  --dropdown-bd-color: var(--success-3);
-  --dropdown-bg-hover: var(--success-5);
+  --dropdown-bd-color: var(--success-2);
+  --dropdown-bg-hover: var(--success-4);
 }
 
 .dropdown-danger, .dropdown-body-danger {
@@ -19,29 +19,29 @@
   --dropdown-fg: #fff;
   --dropdown-bg: var(--danger);
   --dropdown-bd-color: var(--danger-2);
-  --dropdown-bg-hover: var(--danger-5);
+  --dropdown-bg-hover: var(--danger-4);
 }
 
 .dropdown-info, .dropdown-body-info {
   color-scheme: light;
   --dropdown-fg: #000;
   --dropdown-bg: var(--info);
-  --dropdown-bd-color: var(--info-2);
-  --dropdown-bg-hover: var(--info-5);
+  --dropdown-bd-color: var(--info-4);
+  --dropdown-bg-hover: var(--info-2);
 }
 
 .dropdown-warning, .dropdown-body-warning {
   color-scheme: light;
   --dropdown-fg: #000;
   --dropdown-bg: var(--warning);
-  --dropdown-bd-color: var(--warning-1);
-  --dropdown-bg-hover: var(--warning-5);
+  --dropdown-bd-color: var(--warning-4);
+  --dropdown-bg-hover: var(--warning-2);
 }
 
 .dropdown-secondary, .dropdown-body-secondary {
   color-scheme: light;
   --dropdown-fg: #000;
   --dropdown-bg: var(--secondary);
-  --dropdown-bd-color: var(--secondary-3);
-  --dropdown-bg-hover: var(--secondary-5);
+  --dropdown-bd-color: var(--secondary-4);
+  --dropdown-bg-hover: var(--secondary-2);
 }

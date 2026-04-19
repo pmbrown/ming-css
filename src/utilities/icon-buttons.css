@@ -1,0 +1,42 @@
+:where(html) {
+  --ico-close: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2.47 3.53 1.06-1.06 4.47 4.47 4.47-4.47 1.06 1.06-4.47 4.47 4.47 4.47-1.06 1.06-4.47-4.47-4.47 4.47-1.06-1.06 4.47-4.47z'/></svg>");
+  --ico-search: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m11.3 10.1a5.69 5.69 0 1 0-1.22 1.22h-8.75e-4q0.0385 0.0525 0.0858 0.101l3.37 3.37a0.875 0.875 0 0 0 1.24-1.24l-3.37-3.37a0.875 0.875 0 0 0-0.101-0.0875zm0.226-3.36a4.81 4.81 0 1 1-9.62 0 4.81 4.81 0 0 1 9.62 00'/></svg>");
+  --ico-menu: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2 2.5v1.5h12v-1.5h-12zm0 4.75v1.5h12v-1.5h-12zm0 4.75v1.5h12v-1.5h-12z'/></svg>");
+}
+
+:is(.ico, .ico-b, .ico-btn):before, .ico-a:after {
+  display: inline-block;
+  content: "";
+  block-size: var(--ico-xy, 1em);
+  inline-size: var(--ico-xy, 1em);
+  vertical-align: var(--ico-va, -.145em);
+  background-color: var(--ico, CurrentColor);
+  mask: var(--svg) no-repeat;
+  opacity: var(--ico-op, 1);
+}
+
+.ico-b:before { 
+  margin-inline-end: var(--ico-me, calc(1em / 3.75));
+}
+    
+.ico-a:after {
+  --ico-va: -.155em;
+  margin-inline-start: var(--ico-ms, calc(1em / 3.75));
+}
+
+.ico-btn {
+  --ico-va: -.115em;
+  --btn-px: 0.65em;
+}
+
+.ico-close {
+  --svg: var(--ico-close);
+}
+
+.ico-search {
+  --svg: var(--ico-search);
+}
+
+.ico-menu {
+  --svg: var(--ico-menu);
+}

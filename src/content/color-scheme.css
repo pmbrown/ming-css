@@ -1,7 +1,0 @@
-:where(html) {
-  --text: light-dark(#000, #fff);
-  --background: light-dark(#eaecee, #1f2428);
-  --link: light-dark(#1c3db5, #9fbfdf);
-  --link-visited: light-dark(#4f6fe3, #b3cce6);
-  --link-hover: light-dark(#385de0, #c6d8ec);
-}

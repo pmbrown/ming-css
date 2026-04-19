@@ -10,9 +10,9 @@
   inset-block-start: -0.12em;
   padding-block: var(--badge-py, 0.375em);
   padding-inline: var(--badge-px, 0.65em);
-  border: var(--badge-bd-width, var(--border-width, 1px)) solid var(--badge-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--badge-radius, var(--border-radius, 0.188rem));
-  background-color: var(--badge-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+  border: var(--badge-bd-width, 1px) solid var(--badge-bd-color, var(--surf-3));
+  border-radius: var(--badge-radius, 0.188rem);
+  background-color: var(--badge-bg, var(--surf-1));
   
   &:is(.badge-outline) {
     --badge-bg: var(--background, Canvas);

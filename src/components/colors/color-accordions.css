@@ -2,14 +2,16 @@
   color-scheme: dark;
   --accordion-fg: #fff;
   --accordion-bg: var(--primary);
-  --accordion-bd-color: var(--primary-3);
+  --accordion-bd-color: var(--primary-2);
+  --accordion-bg-focus: var(--primary-4);
 }
 
 .accordion-success {
   color-scheme: dark;
   --accordion-fg: #fff;
   --accordion-bg: var(--success);
-  --accordion-bd-color: var(--success-3);
+  --accordion-bd-color: var(--success-2);
+  --accordion-bg-focus: var(--success-4);
 }
 
 .accordion-danger {
@@ -17,13 +19,15 @@
   --accordion-fg: #fff;
   --accordion-bg: var(--danger);
   --accordion-bd-color: var(--danger-2);
+  --accordion-bg-focus: var(--danger-4);
 }
 
 .accordion-info {
   color-scheme: light;
   --accordion-fg: #000;
   --accordion-bg: var(--info);
-  --accordion-bd-color: var(--info-2);
+  --accordion-bd-color: var(--info-1);
+  --accordion-bg-focus: var(--info-2);
 }
 
 .accordion-warning {
@@ -31,11 +35,13 @@
   --accordion-fg: #000;
   --accordion-bg: var(--warning);
   --accordion-bd-color: var(--warning-1);
+  --accordion-bg-focus: var(--warning-2);
 }
 
 .accordion-secondary {
   color-scheme: light;
   --accordion-fg: #000;
   --accordion-bg: var(--secondary);
-  --accordion-bd-color: var(--secondary-3);
+  --accordion-bd-color: var(--secondary-1);
+  --accordion-bg-focus: var(--secondary-2);
 }

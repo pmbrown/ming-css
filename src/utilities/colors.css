@@ -1,9 +1,15 @@
-.fg-color,
+.light {
+  color-scheme: light;
+}
+  
+.dark {
+  color-scheme: dark;
+}
+
 [class*=fg-] {
   color: var(--fg);
 }
 
-.bg-color,
 [class*=bg-] {
   color: var(--fg);
   background-color: var(--bg);

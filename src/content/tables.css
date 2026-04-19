@@ -18,18 +18,18 @@
     padding-block: var(--table-py, 0.35rem);
     padding-inline: var(--table-px, 0.75rem);
     background-color: var(--caption-bg, var(--table-bg, var(--background, Canvas)));
-    border: var(--table-bd-width, var(--border-width, 1px)) solid var(--table-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border: var(--table-bd-width, 1px) solid var(--table-bd-color, var(--surf-3));
     border-block-end: none;
   }
   
   th {
     color: var(--th-fg, var(--table-fg, var(--text, CanvasText)));
-    background-color: var(--th-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+    background-color: var(--th-bg, var(--surf-1));
   }
   
   thead, tbody, tfoot, tr, td, th {
     vertical-align: top;
-    border: var(--table-bd-width, var(--border-width, 1px)) solid var(--table-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border: var(--table-bd-width, 1px) solid var(--table-bd-color, var(--surf-3));
   }
   
   th, td {

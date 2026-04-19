@@ -1,9 +1,10 @@
 .list-group, .list-links,
 [class*=list-group-], [class*=list-links-] {
+  --list-group-inner: calc(var(--list-group-radius, 0.188rem) - var(--list-group-bd-width, 1px));
   color: var(--list-group-fg, CanvasText);
   max-inline-size: var(--list-group-width);
-  border: var(--list-group-bd-width, var(--border-width, 1px)) solid var(--list-group-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--list-group-radius, var(--border-radius, 0.188rem));
+  border: var(--list-group-bd-width, 1px) solid var(--list-group-bd-color, var(--surf-3));
+  border-radius: var(--list-group-radius, 0.188rem);
   background-color: var(--list-group-bg, var(--background, Canvas));
   
   &:is(ul, ol) {
@@ -12,7 +13,7 @@
   }
   
   *:not(:first-child) {
-    border-block-start: var(--list-group-bd-width, var(--border-width, 1px)) solid var(--list-group-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border-block-start: var(--list-group-bd-width, 1px) solid var(--list-group-bd-color, var(--surf-3));
   }
   
   &:is(ol) {
@@ -51,7 +52,7 @@
       padding-inline: var(--list-group-px, 0.75rem);
       
       &:is(:hover, :focus) {
-        background-color: var(--list-group-bg-hover, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+        background-color: var(--list-group-bg-hover, var(--surf-1));
       }
       
       &:focus-visible {
@@ -60,13 +61,13 @@
     }
     
     *:first-child a:is(:hover, :focus) {
-      border-start-start-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
-      border-start-end-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+      border-start-start-radius: var(--list-group-inner);
+      border-start-end-radius: var(--list-group-inner);
     }
     
     *:last-child a:is(:hover, :focus) {
-      border-end-start-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
-      border-end-end-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+      border-end-start-radius: var(--list-group-inner);
+      border-end-end-radius: var(--list-group-inner);
     }
   }
 }

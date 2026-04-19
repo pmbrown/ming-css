@@ -1,0 +1,179 @@
+.bg-primary {
+  --fg: #fff;
+  --bg: var(--primary);
+}
+
+.bg-primary-1 {
+  --fg: #fff;
+  --bg: var(--primary-1);
+}
+
+.bg-primary-2 {
+  --fg: #fff;
+  --bg: var(--primary-2);
+}
+
+.bg-primary-3 {
+  --fg: #fff;
+  --bg: var(--primary-3);
+}
+
+.bg-primary-4 {
+  --fg: #fff;
+  --bg: var(--primary-4);
+}
+
+.bg-primary-5 {
+  --fg: #fff;
+  --bg: var(--primary-5);
+}
+
+.bg-success {
+  --fg: #fff;
+  --bg: var(--success);
+}
+
+.bg-success-1 {
+  --fg: #000;
+  --bg: var(--success-1);
+}
+
+.bg-success-2 {
+  --fg: #fff;
+  --bg: var(--success-2);
+}
+
+.bg-success-3 {
+  --fg: #fff;
+  --bg: var(--success-3);
+}
+
+.bg-success-4 {
+  --fg: #fff;
+  --bg: var(--success-4);
+}
+
+.bg-success-5 {
+  --fg: #fff;
+  --bg: var(--success-5);
+}
+
+.bg-danger {
+  --fg: #fff;
+  --bg: var(--danger);
+}
+
+.bg-danger-1 {
+  --fg: #fff;
+  --bg: var(--danger-1);
+}
+
+.bg-danger-2 {
+  --fg: #fff;
+  --bg: var(--danger-2);
+}
+
+.bg-danger-3 {
+  --fg: #fff;
+  --bg: var(--danger-3);
+}
+
+.bg-danger-4 {
+  --fg: #fff;
+  --bg: var(--danger-4);
+}
+
+.bg-danger-5 {
+  --fg: #fff;
+  --bg: var(--danger-5);
+}
+
+.bg-info {
+  --fg: #000;
+  --bg: var(--info);
+}
+
+.bg-info-1 {
+  --fg: #000;
+  --bg: var(--info-1);
+}
+
+.bg-info-2 {
+  --fg: #000;
+  --bg: var(--info-2);
+}
+
+.bg-info-3 {
+  --fg: #000;
+  --bg: var(--info-3);
+}
+
+.bg-info-4 {
+  --fg: #000;
+  --bg: var(--info-4);
+}
+
+.bg-info-5 {
+  --fg: #000;
+  --bg: var(--info-5);
+}
+
+.bg-warning {
+  --fg: #000;
+  --bg: var(--warning);
+}
+
+.bg-warning-1 {
+  --fg: #000;
+  --bg: var(--warning-1);
+}
+
+.bg-warning-2 {
+  --fg: #000;
+  --bg: var(--warning-2);
+}
+
+.bg-warning-3 {
+  --fg: #000;
+  --bg: var(--warning-3);
+}
+
+.bg-warning-4 {
+  --fg: #000;
+  --bg: var(--warning-4);
+}
+
+.bg-warning-5 {
+  --fg: #000;
+  --bg: var(--warning-5);
+}
+
+.bg-secondary {
+  --fg: #000;
+  --bg: var(--secondary);
+}
+
+.bg-secondary-1 {
+  --fg: #000;
+  --bg: var(--secondary-1);
+}
+
+.bg-secondary-2 {
+  --fg: #000;
+  --bg: var(--secondary-2);
+}
+
+.bg-secondary-3 {
+  --fg: #000;
+  --bg: var(--secondary-3);
+}
+
+.bg-secondary-4 {
+  --fg: #000;
+  --bg: var(--secondary-4);
+}
+
+.bg-secondary-5 {
+  --fg: #000;
+  --bg: var(--secondary-5);
+}

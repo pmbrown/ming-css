@@ -4,8 +4,8 @@
   max-inline-size: var(--card-width);
   padding-block: var(--card-py, 1rem);
   padding-inline: var(--card-px, 1rem);
-  border: var(--card-bd-width, var(--border-width, 1px)) solid var(--card-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--card-radius, var(--border-radius, 0.188rem));
+  border: var(--card-bd-width, 1px) solid var(--card-bd-color, var(--surf-3));
+  border-radius: var(--card-radius, 0.188rem);
   background-color: var(--card-bg, var(--background, Canvas));
   
   :is(p, ol, ul, dl) {
@@ -41,7 +41,7 @@
   }
   
   &:is(:focus-within, :hover) {
-    background-color: var(--card-hover, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+    background-color: var(--card-hover, var(--surf-1));
     cursor: pointer;
     
     img {
@@ -50,6 +50,6 @@
   }
   
   &:focus-within {
-    outline: var(--card-focus, 0.188rem) solid var(--card-focus-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas)));
+    outline: var(--card-focus, 0.188rem) solid var(--card-focus-color, var(--surf-3));
   }
 }

@@ -136,7 +136,7 @@
   padding-block: 0.75rem;
   padding-inline: 1rem;
   margin-block-end: var(--blockquote-mb, 1rem);
-  border: var(--blockquote-bd-width, var(--border-width, 1px)) solid var(--blockquote-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border: var(--blockquote-bd-width, 1px) solid var(--blockquote-bd-color, var(--surf-3));
   border-inline-start-width: var(--blockquote-bd-start-width, 10px);
   background-color: var(--blockquote-bg, var(--background, Canvas));
   
@@ -166,8 +166,12 @@
   overflow: auto;
   padding: var(--pre-pad, 1rem);
   margin-block-end: var(--pre-mb, 1rem);
-  border: var(--pre-bd-width, var(--border-width, 1px)) solid var(--pre-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  background-color: var(--pre-bg, color-mix(in srgb, CanvasText 3%, var(--background, Canvas)));
+  border: var(--pre-bd-width, 1px) solid var(--pre-bd-color, var(--surf-3));
+  background-color: var(--pre-bg, var(--surf-1));
+
+  &:focus-visible {
+    outline: 1px solid var(--pre-bd-color, var(--surf-3));
+  }
 }
 
 :where(figure) {
@@ -184,7 +188,7 @@
 :where(hr) {
   margin-block-end: var(--hr-mb, 1rem);
   border: none;
-  border-block-start: var(--hr-width, 1px) solid var(--hr-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-block-start: var(--hr-width, 1px) solid var(--hr-color, var(--surf-3));
 }
 
 :where(img, svg, video, audio, iframe, embed, object) {
@@ -209,10 +213,3 @@
   white-space: nowrap;
 }
 
-.light {
-  color-scheme: light;
-}
-  
-.dark {
-  color-scheme: dark;
-}

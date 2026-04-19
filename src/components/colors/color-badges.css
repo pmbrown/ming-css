@@ -2,14 +2,14 @@
   color-scheme: dark;
   --badge-fg: #fff;
   --badge-bg: var(--primary);
-  --badge-bd-color: var(--primary-3);
+  --badge-bd-color: var(--primary-2);
 }
 
 .badge-success {
   color-scheme: dark;
   --badge-fg: #fff;
   --badge-bg: var(--success);
-  --badge-bd-color: var(--success-3);
+  --badge-bd-color: var(--success-2);
 }
 
 .badge-danger {
@@ -23,7 +23,7 @@
   color-scheme: light;
   --badge-fg: #000;
   --badge-bg: var(--info);
-  --badge-bd-color: var(--info-2);
+  --badge-bd-color: var(--info-1);
 }
 
 .badge-warning {
@@ -37,5 +37,5 @@
   color-scheme: light;
   --badge-fg: #000;
   --badge-bg: var(--secondary);
-  --badge-bd-color: var(--secondary-3);
+  --badge-bd-color: var(--secondary-1);
 }

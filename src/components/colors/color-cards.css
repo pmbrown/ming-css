@@ -2,16 +2,16 @@
   color-scheme: dark;
   --card-fg: #fff;
   --card-bg: var(--primary);
-  --card-bd-color: var(--primary-3);
-  --card-hover: var(--primary-5);
+  --card-bd-color: var(--primary-2);
+  --card-hover: var(--primary-4);
 }
 
 .card-success, .card-link-success {
   color-scheme: dark;
   --card-fg: #fff;
   --card-bg: var(--success);
-  --card-bd-color: var(--success-3);
-  --card-hover: var(--success-5);
+  --card-bd-color: var(--success-2);
+  --card-hover: var(--success-4);
 }
 
 .card-danger, .card-link-danger {
@@ -19,15 +19,15 @@
   --card-fg: #fff;
   --card-bg: var(--danger);
   --card-bd-color: var(--danger-2);
-  --card-hover: var(--danger-5);
+  --card-hover: var(--danger-4);
 }
 
 .card-info, .card-link-info {
   color-scheme: light;
   --card-fg: #000;
   --card-bg: var(--info);
-  --card-bd-color: var(--info-2);
-  --card-hover: var(--info-5);
+  --card-bd-color: var(--info-1);
+  --card-hover: var(--info-2);
 }
 
 .card-warning, .card-link-warning {
@@ -35,13 +35,13 @@
   --card-fg: #000;
   --card-bg: var(--warning);
   --card-bd-color: var(--warning-1);
-  --card-hover: var(--warning-5);
+  --card-hover: var(--warning-2);
 }
 
 .card-secondary, .card-link-secondary {
   color-scheme: light;
   --card-fg: #000;
   --card-bg: var(--secondary);
-  --card-bd-color: var(--secondary-3);
-  --card-hover: var(--secondary-5);
+  --card-bd-color: var(--secondary-1);
+  --card-hover: var(--secondary-2);
 }

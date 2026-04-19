@@ -1,61 +1,52 @@
-/*! Ming-CSS v0.1.1 | Copyright (c) 2026 Phil Brown | MIT licensed */
+/*! Ming-CSS v0.1.2 | Copyright (c) 2026 Phil Brown | MIT licensed */
 :where(html) {
   --primary: #2d2d86;
-  --primary-1: color-mix(in srgb, var(--primary) 58%, #fff);
-  --primary-2: color-mix(in srgb, var(--primary) 72%, #fff);
-  --primary-3: color-mix(in srgb, var(--primary) 87%, #fff);
-  --primary-4: var(--primary);
-  --primary-5: color-mix(in srgb, var(--primary) 85%, #000);
-  --primary-6: color-mix(in srgb, var(--primary) 72%, #000);
-  --primary-7: color-mix(in srgb, var(--primary) 60%, #000);
+  --primary-1: color-mix(in srgb, var(--primary), #fff 25%);
+  --primary-2: color-mix(in srgb, var(--primary), #fff 10%);
+  --primary-3: var(--primary);
+  --primary-4: color-mix(in srgb, var(--primary), #000 20%);
+  --primary-5: color-mix(in srgb, var(--primary), #000 40%);
   --success: #196719;
-  --success-1: color-mix(in srgb, var(--success) 60%, #fff);
-  --success-2: color-mix(in srgb, var(--success) 75%, #fff);
-  --success-3: color-mix(in srgb, var(--success) 87%, #fff);
-  --success-4: var(--success);
-  --success-5: color-mix(in srgb, var(--success) 80%, #000);
-  --success-6: color-mix(in srgb, var(--success) 62%, #000);
-  --success-7: color-mix(in srgb, var(--success) 47%, #000);
+  --success-1: color-mix(in srgb, var(--success), #fff 25%);
+  --success-2: color-mix(in srgb, var(--success), #fff 10%);
+  --success-3: var(--success);
+  --success-4: color-mix(in srgb, var(--success), #000 20%);
+  --success-5: color-mix(in srgb, var(--success), #000 35%);
   --danger: #961d1d;
-  --danger-1: color-mix(in srgb, var(--danger) 60%, #fff);
-  --danger-2: color-mix(in srgb, var(--danger) 74%, #fff);
-  --danger-3: color-mix(in srgb, var(--danger) 89%, #fff);
-  --danger-4: var(--danger);
-  --danger-5: color-mix(in srgb, var(--danger) 88%, #000);
-  --danger-6: color-mix(in srgb, var(--danger) 78%, #000);
-  --danger-7: color-mix(in srgb, var(--danger) 68%, #000);
+  --danger-1: color-mix(in srgb, var(--danger), #fff 25%);
+  --danger-2: color-mix(in srgb, var(--danger), #fff 12%);
+  --danger-3: var(--danger);
+  --danger-4: color-mix(in srgb, var(--danger), #000 15%);
+  --danger-5: color-mix(in srgb, var(--danger), #000 30%);
   --info: #00ffff;
-  --info-1: color-mix(in srgb, var(--info) 35%, #fff);
-  --info-2: color-mix(in srgb, var(--info) 45%, #fff);
-  --info-3: color-mix(in srgb, var(--info) 65%, #fff);
-  --info-4: var(--info);
-  --info-5: color-mix(in srgb, var(--info) 85%, #443e09);
-  --info-6: color-mix(in srgb, var(--info) 75%, #443e09);
-  --info-7: color-mix(in srgb, var(--info) 65%, #443e09);
+  --info-1: color-mix(in srgb, var(--info), #fff 50%);
+  --info-2: color-mix(in srgb, var(--info), #fff 35%);
+  --info-3: var(--info);
+  --info-4: color-mix(in srgb, var(--info), #000 8%);
+  --info-5: color-mix(in srgb, var(--info), #000 16%);
   --warning: #ffd700;
-  --warning-1: color-mix(in srgb, var(--warning) 40%, #fff);
-  --warning-2: color-mix(in srgb, var(--warning) 60%, #fff);
-  --warning-3: color-mix(in srgb, var(--warning) 80%, #fff);
-  --warning-4: var(--warning);
-  --warning-5: color-mix(in srgb, var(--warning) 90%, #000);
-  --warning-6: color-mix(in srgb, var(--warning) 82%, #000);
-  --warning-7: color-mix(in srgb, var(--warning) 77%, #000);
+  --warning-1: color-mix(in srgb, var(--warning), #fff 45%);
+  --warning-2: color-mix(in srgb, var(--warning), #fff 25%);
+  --warning-3: var(--warning);
+  --warning-4: color-mix(in srgb, var(--warning), #000 8%);
+  --warning-5: color-mix(in srgb, var(--warning), #000 15%);
   --secondary: #b3b3b3;
-  --secondary-1: color-mix(in srgb, var(--secondary) 55%, #fff);
-  --secondary-2: color-mix(in srgb, var(--secondary) 65%, #fff);
-  --secondary-3: color-mix(in srgb, var(--secondary) 75%, #fff);
-  --secondary-4: var(--secondary);
-  --secondary-5: color-mix(in srgb, var(--secondary) 80%, #000);
-  --secondary-6: color-mix(in srgb, var(--secondary) 70%, #000);
-  --secondary-7: color-mix(in srgb, var(--secondary) 60%, #000);
+  --secondary-1: color-mix(in srgb, var(--secondary), #fff 40%);
+  --secondary-2: color-mix(in srgb, var(--secondary), #fff 25%);
+  --secondary-3: var(--secondary);
+  --secondary-4: color-mix(in srgb, var(--secondary), #000 10%);
+  --secondary-5: color-mix(in srgb, var(--secondary), #000 20%);
 }
 
 :where(html) {
   --text: light-dark(#000, #fff);
-  --background: light-dark(#eaecee, #1f2428);
+  --background: light-dark(#f1f2f4, #1f2428);
   --link: light-dark(#1c3db5, #9fbfdf);
   --link-visited: light-dark(#4f6fe3, #b3cce6);
   --link-hover: light-dark(#385de0, #c6d8ec);
+  --surf-1: color-mix(in srgb, CanvasText 5%, var(--background));
+  --surf-2: color-mix(in srgb, CanvasText 10%, var(--background));
+  --surf-3: color-mix(in srgb, CanvasText 20%, var(--background));
 }
 
 :where(:not([popover], dialog)) {
@@ -191,7 +182,7 @@
   padding-block: 0.75rem;
   padding-inline: 1rem;
   margin-block-end: var(--blockquote-mb, 1rem);
-  border: var(--blockquote-bd-width, var(--border-width, 1px)) solid var(--blockquote-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border: var(--blockquote-bd-width, 1px) solid var(--blockquote-bd-color, var(--surf-3));
   border-inline-start-width: var(--blockquote-bd-start-width, 10px);
   background-color: var(--blockquote-bg, var(--background, Canvas));
   p {
@@ -217,8 +208,11 @@
   overflow: auto;
   padding: var(--pre-pad, 1rem);
   margin-block-end: var(--pre-mb, 1rem);
-  border: var(--pre-bd-width, var(--border-width, 1px)) solid var(--pre-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  background-color: var(--pre-bg, color-mix(in srgb, CanvasText 3%, var(--background, Canvas)));
+  border: var(--pre-bd-width, 1px) solid var(--pre-bd-color, var(--surf-3));
+  background-color: var(--pre-bg, var(--surf-1));
+  &:focus-visible {
+    outline: 1px solid var(--pre-bd-color, var(--surf-3));
+  }
 }
 
 :where(figure) {
@@ -234,7 +228,7 @@
 :where(hr) {
   margin-block-end: var(--hr-mb, 1rem);
   border: none;
-  border-block-start: var(--hr-width, 1px) solid var(--hr-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+  border-block-start: var(--hr-width, 1px) solid var(--hr-color, var(--surf-3));
 }
 
 :where(img, svg, video, audio, iframe, embed, object) {
@@ -259,14 +253,6 @@
   white-space: nowrap;
 }
 
-.light {
-  color-scheme: light;
-}
-
-.dark {
-  color-scheme: dark;
-}
-
 :where(button, input, optgroup, select, textarea) {
   font-family: inherit;
   line-height: inherit;
@@ -288,11 +274,11 @@
   font-size: var(--form-fs, inherit);
   padding-block: var(--form-py, 0.313rem);
   padding-inline: var(--form-px, 0.65rem);
-  border: var(--form-bd-width, var(--border-width, 1px)) solid var(--form-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--form-radius, var(--border-radius, 0.188em));
+  border: var(--form-bd-width, 1px) solid var(--form-bd-color, var(--surf-3));
+  border-radius: var(--form-radius, 0.188em);
   background-color: var(--form-bg, var(--background, Canvas));
   &:focus {
-    outline: var(--form-outline-width, 1.75px) solid var(--form-outline-color, color-mix(in srgb, CanvasText 40%, var(--background, Canvas)));
+    outline: var(--form-outline-width, 1.75px) solid var(--form-outline-color, var(--surf-3));
     outline-offset: var(--form-outline-offset, 0);
     &:not(:focus-visible) {
       outline: none;
@@ -306,20 +292,20 @@
   font-size: var(--btn-fs, inherit);
   padding-block: var(--btn-py, 0.313rem);
   padding-inline: var(--btn-px, 0.85rem);
-  border: var(--btn-bd-width, var(--border-width, 1px)) solid var(--btn-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--btn-radius, var(--border-radius, 0.188em));
-  background-color: var(--btn-bg, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+  border: var(--btn-bd-width, 1px) solid var(--btn-bd-color, var(--surf-3));
+  border-radius: var(--btn-radius, 0.188em);
+  background-color: var(--btn-bg, var(--surf-1));
   -webkit-appearance: button;
   &:where(:hover, :focus),
   &:focus:not(:focus-visible):hover {
-    background-color: var(--btn-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+    background-color: var(--btn-hover, var(--surf-2));
   }
   &:focus {
-    outline: var(--btn-outline-width, 1.75px) solid var(--btn-outline-color, color-mix(in srgb, CanvasText 40%, var(--background, Canvas)));
+    outline: var(--btn-outline-width, 1.75px) solid var(--btn-outline-color, var(--surf-3));
     outline-offset: var(--btn-outline-offset, 0);
     &:not(:focus-visible) {
       outline: none;
-      background-color: var(--btn-bg, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+      background-color: var(--btn-bg, var(--surf-1));
     }
   }
   &:is(a) {
@@ -345,7 +331,7 @@
 }
 
 ::file-selector-button:hover {
-  background-color: var(--btn-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+  background-color: var(--btn-hover, var(--surf-2));
 }
 
 :where(textarea) {
@@ -358,8 +344,8 @@
 }
 
 :where(fieldset, legend) {
-  border: var(--form-bd-width, var(--border-width, 1px)) solid var(--form-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--form-radius, var(--border-radius, 0.188em));
+  border: var(--form-bd-width, 1px) solid var(--form-bd-color, var(--surf-3));
+  border-radius: var(--form-radius, 0.188em);
 }
 
 :where(fieldset) {
@@ -439,16 +425,16 @@
     padding-block: var(--table-py, 0.35rem);
     padding-inline: var(--table-px, 0.75rem);
     background-color: var(--caption-bg, var(--table-bg, var(--background, Canvas)));
-    border: var(--table-bd-width, var(--border-width, 1px)) solid var(--table-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border: var(--table-bd-width, 1px) solid var(--table-bd-color, var(--surf-3));
     border-block-end: none;
   }
   th {
     color: var(--th-fg, var(--table-fg, var(--text, CanvasText)));
-    background-color: var(--th-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+    background-color: var(--th-bg, var(--surf-1));
   }
   thead, tbody, tfoot, tr, td, th {
     vertical-align: top;
-    border: var(--table-bd-width, var(--border-width, 1px)) solid var(--table-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border: var(--table-bd-width, 1px) solid var(--table-bd-color, var(--surf-3));
   }
   th, td {
     padding-block: var(--table-py, 0.4rem);
@@ -472,10 +458,11 @@
 
 .accordion,
 [class*=accordion-] {
+  --accordion-inner: calc(var(--accordion-radius, 0.188rem) - var(--accordion-bd-width, 1px));
   color: var(--accordion-fg, var(--text, CanvasText));
   margin-block-end: var(--accordion-mb, 1rem);
-  border: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--accordion-radius, var(--border-radius, 0.188rem));
+  border: var(--accordion-bd-width, 1px) solid var(--accordion-bd-color, var(--surf-3));
+  border-radius: var(--accordion-radius, 0.188rem);
   background-color: var(--accordion-bg, var(--background, Canvas));
   details {
     margin-block-end: 0;
@@ -498,6 +485,10 @@
         inset-block-start: var(--accordion-ico-top, 0.75rem);
         inset-inline-end: var(--accordion-ico-right, 1rem);
       }
+      &:focus-visible {
+        outline: none;
+        background-color: var(--accordion-bg-focus, var(--surf-1));
+      }
     }
     summary::-webkit-details-marker {
       display: none;
@@ -505,14 +496,22 @@
     :is([open] summary) {
       --svg: url("data:image/svg+xml,<svg viewBox='0 0 8 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m4 6 4 4-8 1e-6z'/></svg>");
       margin-block-end: 0;
-      border-block-end: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+      border-block-end: var(--accordion-bd-width, 1px) solid var(--accordion-bd-color, var(--surf-3));
     }
     :last-child {
       margin-block-end: 0;
     }
   }
   :not(:first-child) summary {
-    border-block-start: var(--accordion-bd-width, var(--border-width, 1px)) solid var(--accordion-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border-block-start: var(--accordion-bd-width, 1px) solid var(--accordion-bd-color, var(--surf-3));
+  }
+  details:first-child summary {
+    border-start-start-radius: var(--accordion-inner);
+    border-start-end-radius: var(--accordion-inner);
+  }
+  details:last-child summary {
+    border-end-start-radius: var(--accordion-inner);
+    border-end-end-radius: var(--accordion-inner);
   }
   summary, [open]::details-content {
     padding-block: var(--accordion-py, 0.5rem);
@@ -529,9 +528,9 @@
   margin-block-end: var(--alert-mb, 1rem);
   padding-block: var(--alert-py, 0.75rem);
   padding-inline: var(--alert-px, 1rem);
-  border: var(--alert-bd-width, var(--border-width, 1px)) solid var(--alert-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--alert-radius, var(--border-radius, 0.188rem));
-  background-color: var(--alert-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+  border: var(--alert-bd-width, 1px) solid var(--alert-bd-color, var(--surf-3));
+  border-radius: var(--alert-radius, 0.188rem);
+  background-color: var(--alert-bg, var(--surf-1));
   :last-of-type:is(p, ol, ul, dl) {
     margin-block-end: 0;
   }
@@ -544,30 +543,17 @@ dialog[open]:is(.alert, [class*=alert-]) {
   margin: initial;
   margin-block-end: var(--alert-mb, 1rem);
   padding-inline-end: 3rem;
+  &:focus-visible {
+    outline: 1px solid var(--alert-bd-color, var(--surf-3));
+  }
   .close-alert {
-    --ico: var(--alert-fg, CurrentColor);
-    --svg: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2.47 3.53 1.06-1.06 4.47 4.47 4.47-4.47 1.06 1.06-4.47 4.47 4.47 4.47-1.06 1.06-4.47-4.47-4.47 4.47-1.06-1.06 4.47-4.47z'/></svg>");
+    --btn-bg: transparent;
+    --btn-hover: transparent;
+    --btn-bd-color: transparent;
+    --btn-outline-color: color-mix(in srgb, CanvasText 33%, transparent);
     position: absolute;
-    inset-block-start: 0.5rem;
-    inset-inline-end: 0.75rem;
-    padding-block: 0.15rem;
-    padding-inline: 0.475rem;
-    border-color: transparent;
-    background-color: transparent;
-    &:focus-visible {
-      --ico: #fff;
-      outline: none;
-      background-color: red;
-    }
-    &:before {
-      display: inline-block;
-      content: "";
-      block-size: 1em;
-      inline-size: 1em;
-      vertical-align: -0.15em;
-      background-color: var(--ico);
-      mask: var(--svg) no-repeat;
-    }
+    inset-block-start: 0.375rem;
+    inset-inline-end: 0.5rem;
   }
   p {
     padding-inline-end: 2.5rem;
@@ -586,9 +572,9 @@ dialog[open]:is(.alert, [class*=alert-]) {
   inset-block-start: -0.12em;
   padding-block: var(--badge-py, 0.375em);
   padding-inline: var(--badge-px, 0.65em);
-  border: var(--badge-bd-width, var(--border-width, 1px)) solid var(--badge-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--badge-radius, var(--border-radius, 0.188rem));
-  background-color: var(--badge-bg, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+  border: var(--badge-bd-width, 1px) solid var(--badge-bd-color, var(--surf-3));
+  border-radius: var(--badge-radius, 0.188rem);
+  background-color: var(--badge-bg, var(--surf-1));
   &:is(.badge-outline) {
     --badge-bg: var(--background, Canvas);
   }
@@ -615,15 +601,15 @@ dialog[open]:is(.alert, [class*=alert-]) {
 
 .btn-group {
   *:not(:first-child) {
-    margin-inline-start: calc(var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)));
+    margin-inline-start: calc(var(--btn-bd-width, 1px) - var(--btn-bd-width, 1px) - var(--btn-bd-width, 1px));
   }
   *:first-child, *:is(li):first-child * {
-    border-start-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
-    border-end-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-start-start-radius: var(--btn-radius, 0.188em);
+    border-end-start-radius: var(--btn-radius, 0.188em);
   }
   *:last-child, *:is(li):last-child * {
-    border-start-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
-    border-end-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-start-end-radius: var(--btn-radius, 0.188em);
+    border-end-end-radius: var(--btn-radius, 0.188em);
   }
 }
 
@@ -631,15 +617,15 @@ dialog[open]:is(.alert, [class*=alert-]) {
   flex-direction: column;
   inline-size: fit-content;
   *:not(:first-child) {
-    margin-block-start: calc(var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)) - var(--btn-bd-width, var(--border-width, 1px)));
+    margin-block-start: calc(var(--btn-bd-width, 1px) - var(--btn-bd-width, 1px) - var(--btn-bd-width, 1px));
   }
   *:first-child, *:is(li):first-child * {
-    border-start-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
-    border-start-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-start-start-radius: var(--btn-radius, 0.188em);
+    border-start-end-radius: var(--btn-radius, 0.188em);
   }
   *:last-child, *:is(li):last-child * {
-    border-end-start-radius: var(--btn-radius, var(--border-radius, 0.188em));
-    border-end-end-radius: var(--btn-radius, var(--border-radius, 0.188em));
+    border-end-start-radius: var(--btn-radius, 0.188em);
+    border-end-end-radius: var(--btn-radius, 0.188em);
   }
 }
 
@@ -649,8 +635,8 @@ dialog[open]:is(.alert, [class*=alert-]) {
   max-inline-size: var(--card-width);
   padding-block: var(--card-py, 1rem);
   padding-inline: var(--card-px, 1rem);
-  border: var(--card-bd-width, var(--border-width, 1px)) solid var(--card-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--card-radius, var(--border-radius, 0.188rem));
+  border: var(--card-bd-width, 1px) solid var(--card-bd-color, var(--surf-3));
+  border-radius: var(--card-radius, 0.188rem);
   background-color: var(--card-bg, var(--background, Canvas));
   :is(p, ol, ul, dl) {
     margin-block-end: var(--card-text-mb, 0.5rem);
@@ -679,18 +665,19 @@ dialog[open]:is(.alert, [class*=alert-]) {
     outline: none;
   }
   &:is(:focus-within, :hover) {
-    background-color: var(--card-hover, color-mix(in srgb, CanvasText 4%, var(--background, Canvas)));
+    background-color: var(--card-hover, var(--surf-1));
     cursor: pointer;
     img {
       opacity: 0.85;
     }
   }
   &:focus-within {
-    outline: var(--card-focus, 0.188rem) solid var(--card-focus-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas)));
+    outline: var(--card-focus, 0.188rem) solid var(--card-focus-color, var(--surf-3));
   }
 }
 
 details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
+  --dropdown-inner: calc(var(--dropdown-radius, 0.188rem) - var(--dropdown-bd-width, 1px));
   margin-block-end: var(--dropdown-mb);
   summary {
     list-style-type: "";
@@ -724,8 +711,8 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
     inline-size: var(--dropdown-min, fit-content);
     max-inline-size: var(--dropdown-max, 14rem);
     margin-block-start: var(--dropdown-top, 0.25rem);
-    border: var(--dropdown-bd-width, var(--border-width, 1px)) solid var(--dropdown-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-    border-radius: var(--dropdown-radius, var(--border-radius, 0.188rem));
+    border: var(--dropdown-bd-width, 1px) solid var(--dropdown-bd-color, var(--surf-3));
+    border-radius: var(--dropdown-radius, 0.188rem);
     background-color: var(--dropdown-bg, var(--background, Canvas));
     z-index: 2;
   }
@@ -752,22 +739,22 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
       background-color: var(--dropdown-bg, var(--background, Canvas));
       &:is(:hover, :focus) {
         outline: none;
-        background-color: var(--dropdown-bg-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+        background-color: var(--dropdown-bg-hover, var(--surf-2));
       }
     }
     &:not(ul, ol) :is(a, button):not(:first-child),
     &:is(ul, ol) li:not(:first-child) {
-      border-block-start: var(--dropdown-bd-width, var(--border-width, 1px)) solid var(--dropdown-bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas)));
+      border-block-start: var(--dropdown-bd-width, 1px) solid var(--dropdown-bd-color, var(--surf-3));
     }
     &:not(ul, ol) :first-child:is(a, button),
     &:is(ul, ol) li:first-child *:is(a, button) {
-      border-start-start-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
-      border-start-end-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+      border-start-start-radius: var(--dropdown-inner);
+      border-start-end-radius: var(--dropdown-inner);
     }
     &:not(ul, ol) :last-child:is(a, button),
     &:is(ul, ol) li:last-child *:is(a, button) {
-      border-end-start-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
-      border-end-end-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+      border-end-start-radius: var(--dropdown-inner);
+      border-end-end-radius: var(--dropdown-inner);
     }
   }
   .dropdown-body, [class*=dropdown-body-] {
@@ -787,6 +774,8 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
 
 .dialog,
 [class*=dialog-] {
+  --backdrop-light: color-mix(in srgb, #000 10%, transparent);
+  --backdrop-dark: color-mix(in srgb, #000 40%, transparent);
   color: var(--dialog-fg, var(--text, CanvasText));
   block-size: var(--dialog-block, fit-content);
   max-block-size: var(--dialog-height, calc(100dvh - 2rem));
@@ -796,39 +785,51 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   margin-block-start: var(--dialog-top, 1rem);
   padding-block: var(--dialog-py, 1rem);
   padding-inline: var(--dialog-px, 1rem);
-  border: var(--dialog-bd-width, var(--border-width, 1px)) solid var(--dialog-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--dialog-radius, var(--border-radius, 0.188rem));
+  border: var(--dialog-bd-width, 1px) solid var(--dialog-bd-color, var(--surf-3));
+  border-radius: var(--dialog-radius, 0.188rem);
   background-color: var(--dialog-bg, var(--background, Canvas));
   overflow: auto;
   overscroll-behavior: contain;
-  :last-child {
+  &:focus-visible {
+    outline: 1px solid var(--dialog-bd-color, var(--surf-3));
+  }
+  :last-child:is(p, ol, ul, dl),
+  :last-of-type:is(p, ol, ul, dl):has(+ .close-dialog) {
     margin-block-end: 0;
   }
-  &::backdrop {
-    background-color: var(--dialog-backdrop, color-mix(in srgb, black 50%, transparent));
+  :first-child {
+    margin-inline-end: var(--close-margin, initial);
+  }
+  &:has(.close-dialog) {
+    --close-margin: 5rem;
+    &:has(.ico-btn) {
+      --close-margin: 3rem;
+    }
   }
   .close-dialog {
-    position: fixed;
-    inset: 0;
-    display: block;
-    content: "";
-    z-index: -1;
+    position: absolute;
+    inset-block-start: calc(var(--dialog-py, 1rem) * 0.75);
+    inset-inline-end: calc(var(--dialog-px, 1rem) * 0.75);
+  }
+  &::backdrop {
+    background-color: var(--dialog-backdrop, light-dark(var(--backdrop-light), var(--backdrop-dark)));
   }
 }
 
 .list-group, .list-links,
 [class*=list-group-], [class*=list-links-] {
+  --list-group-inner: calc(var(--list-group-radius, 0.188rem) - var(--list-group-bd-width, 1px));
   color: var(--list-group-fg, CanvasText);
   max-inline-size: var(--list-group-width);
-  border: var(--list-group-bd-width, var(--border-width, 1px)) solid var(--list-group-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--list-group-radius, var(--border-radius, 0.188rem));
+  border: var(--list-group-bd-width, 1px) solid var(--list-group-bd-color, var(--surf-3));
+  border-radius: var(--list-group-radius, 0.188rem);
   background-color: var(--list-group-bg, var(--background, Canvas));
   &:is(ul, ol) {
     list-style-type: "";
     padding-inline-start: 0;
   }
   *:not(:first-child) {
-    border-block-start: var(--list-group-bd-width, var(--border-width, 1px)) solid var(--list-group-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
+    border-block-start: var(--list-group-bd-width, 1px) solid var(--list-group-bd-color, var(--surf-3));
   }
   &:is(ol) {
     counter-reset: ol-list;
@@ -859,19 +860,19 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
       padding-block: var(--list-group-py, 0.5rem);
       padding-inline: var(--list-group-px, 0.75rem);
       &:is(:hover, :focus) {
-        background-color: var(--list-group-bg-hover, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+        background-color: var(--list-group-bg-hover, var(--surf-1));
       }
       &:focus-visible {
         outline: none;
       }
     }
     *:first-child a:is(:hover, :focus) {
-      border-start-start-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
-      border-start-end-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+      border-start-start-radius: var(--list-group-inner);
+      border-start-end-radius: var(--list-group-inner);
     }
     *:last-child a:is(:hover, :focus) {
-      border-end-start-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
-      border-end-end-radius: calc(var(--list-group-radius, var(--border-radius, 0.188rem)) - 1px);
+      border-end-start-radius: var(--list-group-inner);
+      border-end-end-radius: var(--list-group-inner);
     }
   }
 }
@@ -887,25 +888,46 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   margin-block-start: var(--popover-top, 1rem);
   padding-block: var(--popover-py, 1rem);
   padding-inline: var(--popover-px, 1rem);
-  border: var(--popover-bd-width, var(--border-width, 1px)) solid var(--popover-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--popover-radius, var(--border-radius, 0.188rem));
+  border: var(--popover-bd-width, 1px) solid var(--popover-bd-color, var(--surf-3));
+  border-radius: var(--popover-radius, 0.188rem);
   background-color: var(--popover-bg, var(--background, Canvas));
   overflow: auto;
   overscroll-behavior: contain;
-  :last-child {
+  :last-child:is(p, ol, ul, dl),
+  :last-of-type:is(p, ol, ul, dl):has(+ .close-popover) {
     margin-block-end: 0;
+  }
+  :first-child {
+    margin-inline-end: var(--close-margin, initial);
+  }
+  &:has(.close-popover) {
+    --close-margin: 5rem;
+    &:has(.ico-btn) {
+      --close-margin: 3rem;
+    }
+  }
+  .close-popover {
+    position: absolute;
+    inset-block-start: calc(var(--popover-py, 1rem) * 0.75);
+    inset-inline-end: calc(var(--popover-px, 1rem) * 0.75);
   }
   &::backdrop {
     background-color: var(--popover-backdrop, transparent);
   }
 }
 
-.fg-color,
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
 [class*=fg-] {
   color: var(--fg);
 }
 
-.bg-color,
 [class*=bg-] {
   color: var(--fg);
   background-color: var(--bg);
@@ -1178,21 +1200,67 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   content: ""/"Dark ";
 }
 
+:where(html) {
+  --ico-close: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2.47 3.53 1.06-1.06 4.47 4.47 4.47-4.47 1.06 1.06-4.47 4.47 4.47 4.47-1.06 1.06-4.47-4.47-4.47 4.47-1.06-1.06 4.47-4.47z'/></svg>");
+  --ico-search: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m11.3 10.1a5.69 5.69 0 1 0-1.22 1.22h-8.75e-4q0.0385 0.0525 0.0858 0.101l3.37 3.37a0.875 0.875 0 0 0 1.24-1.24l-3.37-3.37a0.875 0.875 0 0 0-0.101-0.0875zm0.226-3.36a4.81 4.81 0 1 1-9.62 0 4.81 4.81 0 0 1 9.62 00'/></svg>");
+  --ico-menu: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><path d='m2 2.5v1.5h12v-1.5h-12zm0 4.75v1.5h12v-1.5h-12zm0 4.75v1.5h12v-1.5h-12z'/></svg>");
+}
+
+:is(.ico, .ico-b, .ico-btn):before, .ico-a:after {
+  display: inline-block;
+  content: "";
+  block-size: var(--ico-xy, 1em);
+  inline-size: var(--ico-xy, 1em);
+  vertical-align: var(--ico-va, -0.145em);
+  background-color: var(--ico, CurrentColor);
+  mask: var(--svg) no-repeat;
+  opacity: var(--ico-op, 1);
+}
+
+.ico-b:before {
+  margin-inline-end: var(--ico-me, 0.2666666667em);
+}
+
+.ico-a:after {
+  --ico-va: -.155em;
+  margin-inline-start: var(--ico-ms, 0.2666666667em);
+}
+
+.ico-btn {
+  --ico-va: -.115em;
+  --btn-px: 0.65em;
+}
+
+.ico-close {
+  --svg: var(--ico-close);
+}
+
+.ico-search {
+  --svg: var(--ico-search);
+}
+
+.ico-menu {
+  --svg: var(--ico-menu);
+}
+
 .form-primary {
+  color-scheme: dark;
   --form-fg: #fff;
   --form-bg: var(--primary);
-  --form-bd-color: var(--primary-3);
-  --form-outline-color: var(--primary-3);
+  --form-bd-color: var(--primary-2);
+  --form-outline-color: var(--primary-2);
 }
 
 .form-success {
+  color-scheme: dark;
   --form-fg: #fff;
   --form-bg: var(--success);
-  --form-bd-color: var(--success-3);
-  --form-outline-color: var(--success-3);
+  --form-bd-color: var(--success-2);
+  --form-outline-color: var(--success-2);
 }
 
 .form-danger {
+  color-scheme: dark;
   --form-fg: #fff;
   --form-bg: var(--danger);
   --form-bd-color: var(--danger-2);
@@ -1200,92 +1268,95 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
 }
 
 .form-info {
+  color-scheme: light;
   --form-fg: #000;
   --form-bg: var(--info);
-  --form-bd-color: var(--info-2);
-  --form-outline-color: var(--info-2);
+  --form-bd-color: var(--info-4);
+  --form-outline-color: var(--info-4);
 }
 
 .form-warning {
+  color-scheme: light;
   --form-fg: #000;
   --form-bg: var(--warning);
-  --form-bd-color: var(--warning-1);
-  --form-outline-color: var(--warning-1);
+  --form-bd-color: var(--warning-4);
+  --form-outline-color: var(--warning-4);
 }
 
 .form-secondary {
+  color-scheme: light;
   --form-fg: #000;
   --form-bg: var(--secondary);
-  --form-bd-color: var(--secondary-3);
-  --form-outline-color: var(--secondary-3);
+  --form-bd-color: var(--secondary-4);
+  --form-outline-color: var(--secondary-4);
 }
 
 .btn-primary {
   --btn-fg: #fff;
   --btn-bg: var(--primary);
-  --btn-bd-color: var(--primary-3);
-  --btn-hover: var(--primary-5);
-  --btn-outline-color: var(--primary-3);
+  --btn-bd-color: var(--primary-2);
+  --btn-hover: var(--primary-4);
+  --btn-outline-color: var(--primary-2);
 }
 
 .btn-success {
   --btn-fg: #fff;
   --btn-bg: var(--success);
-  --btn-bd-color: var(--success-3);
-  --btn-hover: var(--success-5);
-  --btn-outline-color: var(--success-3);
+  --btn-bd-color: var(--success-2);
+  --btn-hover: var(--success-4);
+  --btn-outline-color: var(--success-2);
 }
 
 .btn-danger {
   --btn-fg: #fff;
   --btn-bg: var(--danger);
   --btn-bd-color: var(--danger-2);
-  --btn-hover: var(--danger-5);
+  --btn-hover: var(--danger-4);
   --btn-outline-color: var(--danger-2);
 }
 
 .btn-info {
   --btn-fg: #000;
   --btn-bg: var(--info);
-  --btn-bd-color: var(--info-2);
-  --btn-hover: var(--info-5);
-  --btn-outline-color: var(--info-2);
+  --btn-bd-color: var(--info-4);
+  --btn-hover: var(--info-2);
+  --btn-outline-color: var(--info-4);
 }
 
 .btn-warning {
   --btn-fg: #000;
   --btn-bg: var(--warning);
-  --btn-bd-color: var(--warning-1);
-  --btn-hover: var(--warning-5);
-  --btn-outline-color: var(--warning-1);
+  --btn-bd-color: var(--warning-4);
+  --btn-hover: var(--warning-2);
+  --btn-outline-color: var(--warning-4);
 }
 
 .btn-secondary {
   --btn-fg: #000;
   --btn-bg: var(--secondary);
-  --btn-bd-color: var(--secondary-3);
-  --btn-hover: var(--secondary-5);
-  --btn-outline-color: var(--secondary-3);
+  --btn-bd-color: var(--secondary-4);
+  --btn-hover: var(--secondary-2);
+  --btn-outline-color: var(--secondary-4);
 }
 
 .table-primary {
   color-scheme: dark;
   --table-fg: #fff;
   --th-bg: var(--primary);
-  --table-bg: var(--primary-3);
-  --table-bd-color: var(--primary-5);
-  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--primary-3));
-  --table-hover: color-mix(in srgb, CanvasText 10%, var(--primary-3));
+  --table-bg: var(--primary-2);
+  --table-bd-color: var(--primary-4);
+  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--primary-2));
+  --table-hover: color-mix(in srgb, CanvasText 10%, var(--primary-2));
 }
 
 .table-success {
   color-scheme: dark;
   --table-fg: #fff;
   --th-bg: var(--success);
-  --table-bg: var(--success-3);
-  --table-bd-color: var(--success-5);
-  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--success-3));
-  --table-hover: color-mix(in srgb, CanvasText 10%, var(--success-3));
+  --table-bg: var(--success-2);
+  --table-bd-color: var(--success-4);
+  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--success-2));
+  --table-hover: color-mix(in srgb, CanvasText 10%, var(--success-2));
 }
 
 .table-danger {
@@ -1293,7 +1364,7 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --table-fg: #fff;
   --th-bg: var(--danger);
   --table-bg: var(--danger-2);
-  --table-bd-color: var(--danger-5);
+  --table-bd-color: var(--danger-4);
   --table-stripes: color-mix(in srgb, CanvasText 5%, var(--danger-2));
   --table-hover: color-mix(in srgb, CanvasText 10%, var(--danger-2));
 }
@@ -1303,7 +1374,7 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --table-fg: #000;
   --th-bg: var(--info);
   --table-bg: var(--info-2);
-  --table-bd-color: var(--info-5);
+  --table-bd-color: var(--info-4);
   --table-stripes: color-mix(in srgb, CanvasText 5%, var(--info-2));
   --table-hover: color-mix(in srgb, CanvasText 10%, var(--info-2));
 }
@@ -1313,7 +1384,7 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --table-fg: #000;
   --th-bg: var(--warning);
   --table-bg: var(--warning-1);
-  --table-bd-color: var(--warning-5);
+  --table-bd-color: var(--warning-4);
   --table-stripes: color-mix(in srgb, CanvasText 5%, var(--warning-1));
   --table-hover: color-mix(in srgb, CanvasText 10%, var(--warning-1));
 }
@@ -1322,8 +1393,8 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   color-scheme: light;
   --table-fg: #000;
   --th-bg: var(--secondary);
-  --table-bg: var(--secondary-3);
-  --table-bd-color: var(--secondary-5);
+  --table-bg: var(--secondary-2);
+  --table-bd-color: var(--secondary-4);
   --table-stripes: color-mix(in srgb, CanvasText 5%, var(--secondary-3));
   --table-hover: color-mix(in srgb, CanvasText 10%, var(--secondary-3));
 }
@@ -1332,14 +1403,16 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   color-scheme: dark;
   --accordion-fg: #fff;
   --accordion-bg: var(--primary);
-  --accordion-bd-color: var(--primary-3);
+  --accordion-bd-color: var(--primary-2);
+  --accordion-bg-focus: var(--primary-4);
 }
 
 .accordion-success {
   color-scheme: dark;
   --accordion-fg: #fff;
   --accordion-bg: var(--success);
-  --accordion-bd-color: var(--success-3);
+  --accordion-bd-color: var(--success-2);
+  --accordion-bg-focus: var(--success-4);
 }
 
 .accordion-danger {
@@ -1347,13 +1420,15 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --accordion-fg: #fff;
   --accordion-bg: var(--danger);
   --accordion-bd-color: var(--danger-2);
+  --accordion-bg-focus: var(--danger-4);
 }
 
 .accordion-info {
   color-scheme: light;
   --accordion-fg: #000;
   --accordion-bg: var(--info);
-  --accordion-bd-color: var(--info-2);
+  --accordion-bd-color: var(--info-1);
+  --accordion-bg-focus: var(--info-2);
 }
 
 .accordion-warning {
@@ -1361,27 +1436,29 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --accordion-fg: #000;
   --accordion-bg: var(--warning);
   --accordion-bd-color: var(--warning-1);
+  --accordion-bg-focus: var(--warning-2);
 }
 
 .accordion-secondary {
   color-scheme: light;
   --accordion-fg: #000;
   --accordion-bg: var(--secondary);
-  --accordion-bd-color: var(--secondary-3);
+  --accordion-bd-color: var(--secondary-1);
+  --accordion-bg-focus: var(--secondary-2);
 }
 
 .alert-primary {
   color-scheme: dark;
   --alert-fg: #fff;
   --alert-bg: var(--primary);
-  --alert-bd-color: var(--primary-3);
+  --alert-bd-color: var(--primary-2);
 }
 
 .alert-success {
   color-scheme: dark;
   --alert-fg: #fff;
   --alert-bg: var(--success);
-  --alert-bd-color: var(--success-3);
+  --alert-bd-color: var(--success-2);
 }
 
 .alert-danger {
@@ -1395,7 +1472,7 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   color-scheme: light;
   --alert-fg: #000;
   --alert-bg: var(--info);
-  --alert-bd-color: var(--info-2);
+  --alert-bd-color: var(--info-1);
 }
 
 .alert-warning {
@@ -1409,21 +1486,21 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   color-scheme: light;
   --alert-fg: #000;
   --alert-bg: var(--secondary);
-  --alert-bd-color: var(--secondary-3);
+  --alert-bd-color: var(--secondary-1);
 }
 
 .badge-primary {
   color-scheme: dark;
   --badge-fg: #fff;
   --badge-bg: var(--primary);
-  --badge-bd-color: var(--primary-3);
+  --badge-bd-color: var(--primary-2);
 }
 
 .badge-success {
   color-scheme: dark;
   --badge-fg: #fff;
   --badge-bg: var(--success);
-  --badge-bd-color: var(--success-3);
+  --badge-bd-color: var(--success-2);
 }
 
 .badge-danger {
@@ -1437,7 +1514,7 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   color-scheme: light;
   --badge-fg: #000;
   --badge-bg: var(--info);
-  --badge-bd-color: var(--info-2);
+  --badge-bd-color: var(--info-1);
 }
 
 .badge-warning {
@@ -1451,23 +1528,23 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   color-scheme: light;
   --badge-fg: #000;
   --badge-bg: var(--secondary);
-  --badge-bd-color: var(--secondary-3);
+  --badge-bd-color: var(--secondary-1);
 }
 
 .card-primary, .card-link-primary {
   color-scheme: dark;
   --card-fg: #fff;
   --card-bg: var(--primary);
-  --card-bd-color: var(--primary-3);
-  --card-hover: var(--primary-5);
+  --card-bd-color: var(--primary-2);
+  --card-hover: var(--primary-4);
 }
 
 .card-success, .card-link-success {
   color-scheme: dark;
   --card-fg: #fff;
   --card-bg: var(--success);
-  --card-bd-color: var(--success-3);
-  --card-hover: var(--success-5);
+  --card-bd-color: var(--success-2);
+  --card-hover: var(--success-4);
 }
 
 .card-danger, .card-link-danger {
@@ -1475,15 +1552,15 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --card-fg: #fff;
   --card-bg: var(--danger);
   --card-bd-color: var(--danger-2);
-  --card-hover: var(--danger-5);
+  --card-hover: var(--danger-4);
 }
 
 .card-info, .card-link-info {
   color-scheme: light;
   --card-fg: #000;
   --card-bg: var(--info);
-  --card-bd-color: var(--info-2);
-  --card-hover: var(--info-5);
+  --card-bd-color: var(--info-1);
+  --card-hover: var(--info-2);
 }
 
 .card-warning, .card-link-warning {
@@ -1491,31 +1568,31 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --card-fg: #000;
   --card-bg: var(--warning);
   --card-bd-color: var(--warning-1);
-  --card-hover: var(--warning-5);
+  --card-hover: var(--warning-2);
 }
 
 .card-secondary, .card-link-secondary {
   color-scheme: light;
   --card-fg: #000;
   --card-bg: var(--secondary);
-  --card-bd-color: var(--secondary-3);
-  --card-hover: var(--secondary-5);
+  --card-bd-color: var(--secondary-1);
+  --card-hover: var(--secondary-2);
 }
 
 .dropdown-primary, .dropdown-body-primary {
   color-scheme: dark;
   --dropdown-fg: #fff;
   --dropdown-bg: var(--primary);
-  --dropdown-bd-color: var(--primary-3);
-  --dropdown-bg-hover: var(--primary-5);
+  --dropdown-bd-color: var(--primary-2);
+  --dropdown-bg-hover: var(--primary-4);
 }
 
 .dropdown-success, .dropdown-body-success {
   color-scheme: dark;
   --dropdown-fg: #fff;
   --dropdown-bg: var(--success);
-  --dropdown-bd-color: var(--success-3);
-  --dropdown-bg-hover: var(--success-5);
+  --dropdown-bd-color: var(--success-2);
+  --dropdown-bg-hover: var(--success-4);
 }
 
 .dropdown-danger, .dropdown-body-danger {
@@ -1523,47 +1600,47 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --dropdown-fg: #fff;
   --dropdown-bg: var(--danger);
   --dropdown-bd-color: var(--danger-2);
-  --dropdown-bg-hover: var(--danger-5);
+  --dropdown-bg-hover: var(--danger-4);
 }
 
 .dropdown-info, .dropdown-body-info {
   color-scheme: light;
   --dropdown-fg: #000;
   --dropdown-bg: var(--info);
-  --dropdown-bd-color: var(--info-2);
-  --dropdown-bg-hover: var(--info-5);
+  --dropdown-bd-color: var(--info-4);
+  --dropdown-bg-hover: var(--info-2);
 }
 
 .dropdown-warning, .dropdown-body-warning {
   color-scheme: light;
   --dropdown-fg: #000;
   --dropdown-bg: var(--warning);
-  --dropdown-bd-color: var(--warning-1);
-  --dropdown-bg-hover: var(--warning-5);
+  --dropdown-bd-color: var(--warning-4);
+  --dropdown-bg-hover: var(--warning-2);
 }
 
 .dropdown-secondary, .dropdown-body-secondary {
   color-scheme: light;
   --dropdown-fg: #000;
   --dropdown-bg: var(--secondary);
-  --dropdown-bd-color: var(--secondary-3);
-  --dropdown-bg-hover: var(--secondary-5);
+  --dropdown-bd-color: var(--secondary-4);
+  --dropdown-bg-hover: var(--secondary-2);
 }
 
 .list-group-primary, .list-links-primary {
   color-scheme: dark;
   --list-group-fg: #fff;
   --list-group-bg: var(--primary);
-  --list-group-bd-color: var(--primary-3);
-  --list-group-bg-hover: var(--primary-5);
+  --list-group-bd-color: var(--primary-2);
+  --list-group-bg-hover: var(--primary-4);
 }
 
 .list-group-success, .list-links-success {
   color-scheme: dark;
   --list-group-fg: #fff;
   --list-group-bg: var(--success);
-  --list-group-bd-color: var(--success-3);
-  --list-group-bg-hover: var(--success-5);
+  --list-group-bd-color: var(--success-2);
+  --list-group-bg-hover: var(--success-4);
 }
 
 .list-group-danger, .list-links-danger {
@@ -1571,45 +1648,45 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --list-group-fg: #fff;
   --list-group-bg: var(--danger);
   --list-group-bd-color: var(--danger-2);
-  --list-group-bg-hover: var(--danger-5);
+  --list-group-bg-hover: var(--danger-4);
 }
 
 .list-group-info, .list-links-info {
   color-scheme: light;
   --list-group-fg: #000;
   --list-group-bg: var(--info);
-  --list-group-bd-color: var(--info-2);
-  --list-group-bg-hover: var(--info-5);
+  --list-group-bd-color: var(--info-4);
+  --list-group-bg-hover: var(--info-2);
 }
 
 .list-group-warning, .list-links-warning {
   color-scheme: light;
   --list-group-fg: #000;
   --list-group-bg: var(--warning);
-  --list-group-bd-color: var(--warning-1);
-  --list-group-bg-hover: var(--warning-5);
+  --list-group-bd-color: var(--warning-4);
+  --list-group-bg-hover: var(--warning-2);
 }
 
 .list-group-secondary, .list-links-secondary {
   color-scheme: light;
   --list-group-fg: #000;
   --list-group-bg: var(--secondary);
-  --list-group-bd-color: var(--secondary-3);
-  --list-group-bg-hover: var(--secondary-5);
+  --list-group-bd-color: var(--secondary-4);
+  --list-group-bg-hover: var(--secondary-2);
 }
 
 .dialog-primary {
   color-scheme: dark;
   --dialog-fg: #fff;
   --dialog-bg: var(--primary);
-  --dialog-bd-color: var(--primary-3);
+  --dialog-bd-color: var(--primary-2);
 }
 
 .dialog-success {
   color-scheme: dark;
   --dialog-fg: #fff;
   --dialog-bg: var(--success);
-  --dialog-bd-color: var(--success-3);
+  --dialog-bd-color: var(--success-2);
 }
 
 .dialog-danger {
@@ -1623,35 +1700,35 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   color-scheme: light;
   --dialog-fg: #000;
   --dialog-bg: var(--info);
-  --dialog-bd-color: var(--info-2);
+  --dialog-bd-color: var(--info-4);
 }
 
 .dialog-warning {
   color-scheme: light;
   --dialog-fg: #000;
   --dialog-bg: var(--warning);
-  --dialog-bd-color: var(--warning-1);
+  --dialog-bd-color: var(--warning-4);
 }
 
 .dialog-secondary {
   color-scheme: light;
   --dialog-fg: #000;
-  --dialog-bg: var(--secondary);
-  --dialog-bd-color: var(--secondary-3);
+  --dialog-bg: var(--secondary-1);
+  --dialog-bd-color: var(--secondary-4);
 }
 
 .popover-primary {
   color-scheme: dark;
   --popover-fg: #fff;
   --popover-bg: var(--primary);
-  --popover-bd-color: var(--primary-3);
+  --popover-bd-color: var(--primary-2);
 }
 
 .popover-success {
   color-scheme: dark;
   --popover-fg: #fff;
   --popover-bg: var(--success);
-  --popover-bd-color: var(--success-3);
+  --popover-bd-color: var(--success-2);
 }
 
 .popover-danger {
@@ -1665,21 +1742,21 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   color-scheme: light;
   --popover-fg: #000;
   --popover-bg: var(--info);
-  --popover-bd-color: var(--info-2);
+  --popover-bd-color: var(--info-4);
 }
 
 .popover-warning {
   color-scheme: light;
   --popover-fg: #000;
   --popover-bg: var(--warning);
-  --popover-bd-color: var(--warning-1);
+  --popover-bd-color: var(--warning-4);
 }
 
 .popover-secondary {
   color-scheme: light;
   --popover-fg: #000;
   --popover-bg: var(--secondary);
-  --popover-bd-color: var(--secondary-3);
+  --popover-bd-color: var(--secondary-4);
 }
 
 .bg-primary {
@@ -1688,7 +1765,7 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
 }
 
 .bg-primary-1 {
-  --fg: #000;
+  --fg: #fff;
   --bg: var(--primary-1);
 }
 
@@ -1712,16 +1789,6 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --bg: var(--primary-5);
 }
 
-.bg-primary-6 {
-  --fg: #fff;
-  --bg: var(--primary-6);
-}
-
-.bg-primary-7 {
-  --fg: #fff;
-  --bg: var(--primary-7);
-}
-
 .bg-success {
   --fg: #fff;
   --bg: var(--success);
@@ -1733,7 +1800,7 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
 }
 
 .bg-success-2 {
-  --fg: #000;
+  --fg: #fff;
   --bg: var(--success-2);
 }
 
@@ -1752,23 +1819,13 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --bg: var(--success-5);
 }
 
-.bg-success-6 {
-  --fg: #fff;
-  --bg: var(--success-6);
-}
-
-.bg-success-7 {
-  --fg: #fff;
-  --bg: var(--success-7);
-}
-
 .bg-danger {
   --fg: #fff;
   --bg: var(--danger);
 }
 
 .bg-danger-1 {
-  --fg: #000;
+  --fg: #fff;
   --bg: var(--danger-1);
 }
 
@@ -1790,16 +1847,6 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
 .bg-danger-5 {
   --fg: #fff;
   --bg: var(--danger-5);
-}
-
-.bg-danger-6 {
-  --fg: #fff;
-  --bg: var(--danger-6);
-}
-
-.bg-danger-7 {
-  --fg: #fff;
-  --bg: var(--danger-7);
 }
 
 .bg-info {
@@ -1832,16 +1879,6 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --bg: var(--info-5);
 }
 
-.bg-info-6 {
-  --fg: #000;
-  --bg: var(--info-6);
-}
-
-.bg-info-7 {
-  --fg: #000;
-  --bg: var(--info-7);
-}
-
 .bg-warning {
   --fg: #000;
   --bg: var(--warning);
@@ -1872,16 +1909,6 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   --bg: var(--warning-5);
 }
 
-.bg-warning-6 {
-  --fg: #000;
-  --bg: var(--warning-6);
-}
-
-.bg-warning-7 {
-  --fg: #000;
-  --bg: var(--warning-7);
-}
-
 .bg-secondary {
   --fg: #000;
   --bg: var(--secondary);
@@ -1910,14 +1937,4 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
 .bg-secondary-5 {
   --fg: #000;
   --bg: var(--secondary-5);
-}
-
-.bg-secondary-6 {
-  --fg: #000;
-  --bg: var(--secondary-6);
-}
-
-.bg-secondary-7 {
-  --fg: #fff;
-  --bg: var(--secondary-7);
 }

@@ -1,4 +1,5 @@
 details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
+  --dropdown-inner: calc(var(--dropdown-radius, 0.188rem) - var(--dropdown-bd-width, 1px));
   margin-block-end: var(--dropdown-mb);
   
   summary {
@@ -38,8 +39,8 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
     inline-size: var(--dropdown-min, fit-content);
     max-inline-size: var(--dropdown-max, 14rem);
     margin-block-start: var(--dropdown-top, 0.25rem);
-    border: var(--dropdown-bd-width, var(--border-width, 1px)) solid var(--dropdown-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-    border-radius: var(--dropdown-radius, var(--border-radius, 0.188rem));
+    border: var(--dropdown-bd-width, 1px) solid var(--dropdown-bd-color, var(--surf-3));
+    border-radius: var(--dropdown-radius, 0.188rem);
     background-color: var(--dropdown-bg, var(--background, Canvas));
     z-index: 2;
   }
@@ -72,25 +73,25 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
       
       &:is(:hover, :focus) {
         outline: none;
-        background-color: var(--dropdown-bg-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+        background-color: var(--dropdown-bg-hover, var(--surf-2));
       }
     }
     
     &:not(ul, ol) :is(a, button):not(:first-child),
     &:is(ul, ol) li:not(:first-child) {
-      border-block-start: var(--dropdown-bd-width, var(--border-width, 1px)) solid var(--dropdown-bd-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas)));
+      border-block-start: var(--dropdown-bd-width, 1px) solid var(--dropdown-bd-color, var(--surf-3));
     }
     
     &:not(ul, ol) :first-child:is(a, button),
     &:is(ul, ol) li:first-child *:is(a, button) {
-      border-start-start-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
-      border-start-end-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+      border-start-start-radius: var(--dropdown-inner);
+      border-start-end-radius: var(--dropdown-inner);
     }
     
     &:not(ul, ol) :last-child:is(a, button),
     &:is(ul, ol) li:last-child *:is(a, button) {
-      border-end-start-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
-      border-end-end-radius: calc(var(--dropdown-radius, var(--border-radius, 0.188rem)) - var(--dropdown-bd-width, var(--border-width, 1px)));
+      border-end-start-radius: var(--dropdown-inner);
+      border-end-end-radius: var(--dropdown-inner);
     }
   }
   

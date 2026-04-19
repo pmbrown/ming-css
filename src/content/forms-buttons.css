@@ -19,12 +19,12 @@
   font-size: var(--form-fs, inherit);
   padding-block: var(--form-py, 0.313rem);
   padding-inline: var(--form-px, 0.65rem);
-  border: var(--form-bd-width, var(--border-width, 1px)) solid var(--form-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--form-radius, var(--border-radius, 0.188em));
+  border: var(--form-bd-width, 1px) solid var(--form-bd-color, var(--surf-3));
+  border-radius: var(--form-radius, 0.188em);
   background-color: var(--form-bg, var(--background, Canvas));
   
   &:focus {
-    outline: var(--form-outline-width, 1.75px) solid var(--form-outline-color, color-mix(in srgb, CanvasText 40%, var(--background, Canvas)));
+    outline: var(--form-outline-width, 1.75px) solid var(--form-outline-color, var(--surf-3));
     outline-offset: var(--form-outline-offset, 0);
     
     &:not(:focus-visible) {
@@ -39,22 +39,22 @@
   font-size: var(--btn-fs, inherit);
   padding-block: var(--btn-py, 0.313rem);
   padding-inline: var(--btn-px, 0.85rem);
-  border: var(--btn-bd-width, var(--border-width, 1px)) solid var(--btn-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--btn-radius, var(--border-radius, 0.188em));
-  background-color: var(--btn-bg, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+  border: var(--btn-bd-width, 1px) solid var(--btn-bd-color, var(--surf-3));
+  border-radius: var(--btn-radius, 0.188em);
+  background-color: var(--btn-bg, var(--surf-1));
   -webkit-appearance: button;
   
   &:where(:hover, :focus),
   &:focus:not(:focus-visible):hover {
-    background-color: var(--btn-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+    background-color: var(--btn-hover, var(--surf-2));
   }
   
   &:focus {
-    outline: var(--btn-outline-width, 1.75px) solid var(--btn-outline-color, color-mix(in srgb, CanvasText 40%, var(--background, Canvas)));
+    outline: var(--btn-outline-width, 1.75px) solid var(--btn-outline-color, var(--surf-3));
     outline-offset: var(--btn-outline-offset, 0);
     &:not(:focus-visible) {
       outline: none;
-      background-color: var(--btn-bg, color-mix(in srgb, CanvasText 5%, var(--background, Canvas)));
+      background-color: var(--btn-bg, var(--surf-1));
     }
   }
   
@@ -81,7 +81,7 @@
 }
 
 ::file-selector-button:hover {
-  background-color: var(--btn-hover, color-mix(in srgb, CanvasText 10%, var(--background, Canvas)));
+  background-color: var(--btn-hover, var(--surf-2));
 }
 
 :where(textarea) {
@@ -94,8 +94,8 @@
 }
 
 :where(fieldset, legend) {
-  border: var(--form-bd-width, var(--border-width, 1px)) solid var(--form-bd-color, var(--border-color, color-mix(in srgb, CanvasText 20%, var(--background, Canvas))));
-  border-radius: var(--form-radius, var(--border-radius, 0.188em));
+  border: var(--form-bd-width, 1px) solid var(--form-bd-color, var(--surf-3));
+  border-radius: var(--form-radius, 0.188em);
 }
 
 :where(fieldset) {
