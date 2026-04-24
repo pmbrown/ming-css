@@ -6,7 +6,7 @@
   block-size: var(--dialog-block, fit-content);
   max-block-size: var(--dialog-height, calc(100dvh - 2rem));
   inline-size: var(--dialog-inline, calc(100% - 6px - 2em));
-  max-inline-size: var(--dialog-width, fit-content);
+  max-inline-size: var(--dialog-width, 24rem);
   margin: auto;
   margin-block-start: var(--dialog-top, 1rem);
   padding-block: var(--dialog-py, 1rem);
@@ -14,7 +14,7 @@
   border: var(--dialog-bd-width, 1px) solid var(--dialog-bd-color, var(--surf-3));
   border-radius: var(--dialog-radius, 0.188rem);
   background-color: var(--dialog-bg, var(--background, Canvas));
-  overflow: auto;
+  overflow-y: auto;
   overscroll-behavior: contain;
   
   &:focus-visible {

@@ -4,7 +4,7 @@
   block-size: var(--popover-block, fit-content);
   max-block-size: var(--popover-height, calc(100dvh - 2rem));
   inline-size: var(--popover-inline, calc(100% - 6px - 2em));
-  max-inline-size: var(--popover-width, fit-content);
+  max-inline-size: var(--popover-width, 24rem);
   margin: auto;
   margin-block-start: var(--popover-top, 1rem);
   padding-block: var(--popover-py, 1rem);
@@ -12,7 +12,7 @@
   border: var(--popover-bd-width, 1px) solid var(--popover-bd-color, var(--surf-3));
   border-radius: var(--popover-radius, 0.188rem);
   background-color: var(--popover-bg, var(--background, Canvas));
-  overflow: auto;
+  overflow-y: auto;
   overscroll-behavior: contain;
     
   :last-child:is(p, ol, ul, dl),

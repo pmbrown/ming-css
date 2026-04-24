@@ -1,6 +1,5 @@
 @use "version" as *;
-/*! Ming-CSS v#{$version} | #{$copyright} | #{$license} */
-@use "variables/primary-colors";
+/*! Ming-CSS v#{$version} (mono) | #{$copyright} | #{$license} */
 @use "variables/color-scheme";
 @use "content/typography";
 @use "content/forms-buttons";
@@ -21,16 +20,3 @@
 @use "utilities/offcanvas";
 @use "utilities/theme-switch";
 @use "utilities/icon-buttons";
-@use "content/colors/color-forms";
-@use "content/colors/color-buttons";
-@use "content/colors/color-tables";
-@use "components/colors/color-accordions";
-@use "components/colors/color-alerts";
-@use "components/colors/color-badges";
-@use "components/colors/color-cards";
-@use "components/colors/color-dropdowns";
-@use "components/colors/color-list-groups";
-@use "components/colors/color-dialogs";
-@use "components/colors/color-popovers";
-@use "utilities/colors/color-backgrounds";
-

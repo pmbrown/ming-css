@@ -21,12 +21,12 @@
 
 .list-divider {
   *:not(:first-child) {
-    padding-inline-start: var(--gap, 0.5rem);
+    padding-inline-start: var(--pad, 0.5rem);
   }
   *:not(:last-child):after {
     color: var(--divider-color, CanvasText);
     content: var(--divider, "|");
-    padding-inline-start: var(--gap, 0.5rem);
+    padding-inline-start: var(--pad, 0.5rem);
     opacity: var(--divider-op, 1);
   }
 }
@@ -71,7 +71,7 @@
 .dl-comma, .dl-comma-inline {
   dd:not(:last-child):after {
     content: var(--content, ",");
-    padding-inline-end: var(--gap, 0.5rem);
+    padding-inline-end: var(--pad, 0.5rem);
   }
   dd:not(:last-child):has(+ dt):after {
     content: "";

@@ -4,8 +4,8 @@
   --th-bg: var(--primary);
   --table-bg: var(--primary-2);
   --table-bd-color: var(--primary-4);
-  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--primary-2));
-  --table-hover: color-mix(in srgb, CanvasText 10%, var(--primary-2));
+  --table-stripes: color-mix(in srgb, var(--primary), #fff 13%);
+  --table-hover: color-mix(in srgb, var(--primary), #fff 6%);
 }
 
 .table-success {
@@ -14,8 +14,8 @@
   --th-bg: var(--success);
   --table-bg: var(--success-2);
   --table-bd-color: var(--success-4);
-  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--success-2));
-  --table-hover: color-mix(in srgb, CanvasText 10%, var(--success-2));
+  --table-stripes: color-mix(in srgb, var(--success), #fff 15%);
+  --table-hover: color-mix(in srgb, var(--success), #fff 6%);
 }
 
 .table-danger {
@@ -24,18 +24,18 @@
   --th-bg: var(--danger);
   --table-bg: var(--danger-2);
   --table-bd-color: var(--danger-4);
-  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--danger-2));
-  --table-hover: color-mix(in srgb, CanvasText 10%, var(--danger-2));
+  --table-stripes: color-mix(in srgb, var(--danger), #fff 15%);
+  --table-hover: color-mix(in srgb, var(--danger), #fff 5%);
 }
 
 .table-info {
   color-scheme: light;
   --table-fg: #000;
   --th-bg: var(--info);
-  --table-bg: var(--info-2);
+  --table-bg: var(--info-1);
   --table-bd-color: var(--info-4);
-  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--info-2));
-  --table-hover: color-mix(in srgb, CanvasText 10%, var(--info-2));
+  --table-stripes: color-mix(in srgb, var(--info), #fff 40%);
+  --table-hover: color-mix(in srgb, var(--info), #fff 30%);
 }
 
 .table-warning {
@@ -44,16 +44,16 @@
   --th-bg: var(--warning);
   --table-bg: var(--warning-1);
   --table-bd-color: var(--warning-4);
-  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--warning-1));
-  --table-hover: color-mix(in srgb, CanvasText 10%, var(--warning-1));
+  --table-stripes: color-mix(in srgb, var(--warning), #fff 35%);
+  --table-hover: color-mix(in srgb, var(--warning), #fff 25%);
 }
 
 .table-secondary {
   color-scheme: light;
   --table-fg: #000;
   --th-bg: var(--secondary);
-  --table-bg: var(--secondary-2);
+  --table-bg: var(--secondary-1);
   --table-bd-color: var(--secondary-4);
-  --table-stripes: color-mix(in srgb, CanvasText 5%, var(--secondary-3));
-  --table-hover: color-mix(in srgb, CanvasText 10%, var(--secondary-3));
+  --table-stripes: color-mix(in srgb, var(--secondary), #fff 30%);
+  --table-hover: color-mix(in srgb, var(--secondary), #fff 20%);
 }

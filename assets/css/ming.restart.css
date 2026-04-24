@@ -1,4 +1,4 @@
-/*! Ming-CSS (restart) v0.1.2 | Copyright (c) 2026 Phil Brown | MIT licensed */
+/*! Ming-CSS v0.1.3 (restart) | Copyright (c) 2026 Phil Brown | MIT license (https://github.com/pmbrown/ming-css/blob/main/LICENSE) */
 :where(html) {
   --text: light-dark(#000, #fff);
   --background: light-dark(#f1f2f4, #1f2428);
