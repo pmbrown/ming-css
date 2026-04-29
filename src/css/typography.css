@@ -84,6 +84,10 @@
   margin-block-end: var(--para-mb, 1rem);
 }
 
+:where(b, strong) {
+  font-weight: var(--bold-fw, revert);
+}
+
 :where(small) {
   font-size: var(--sml-fs, 0.875em);
 }

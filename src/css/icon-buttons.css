@@ -9,7 +9,7 @@
   content: "";
   block-size: var(--ico-xy, 1em);
   inline-size: var(--ico-xy, 1em);
-  vertical-align: var(--ico-va, -.145em);
+  vertical-align: var(--ico-va, -.16em);
   background-color: var(--ico, CurrentColor);
   mask: var(--svg) no-repeat;
   opacity: var(--ico-op, 1);
@@ -20,12 +20,10 @@
 }
     
 .ico-a:after {
-  --ico-va: -.155em;
   margin-inline-start: var(--ico-ms, calc(1em / 3.75));
 }
 
 .ico-btn {
-  --ico-va: -.115em;
   --btn-px: 0.65em;
 }
 

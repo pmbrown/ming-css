@@ -1,4 +1,4 @@
-/*! Ming-CSS v0.1.3 (mono) | Copyright (c) 2026 Phil Brown | MIT license (https://github.com/pmbrown/ming-css/blob/main/LICENSE) */
+/*! Ming-CSS v0.1.4 (mono) | Copyright (c) 2026 Phil Brown | MIT license (https://github.com/pmbrown/ming-css/blob/main/LICENSE) */
 :where(html) {
   --text: light-dark(#000, #fff);
   --background: light-dark(#f1f2f4, #1f2428);
@@ -91,6 +91,10 @@
   font-size: var(--para-fs, inherit);
   text-wrap: var(--para-tw, pretty);
   margin-block-end: var(--para-mb, 1rem);
+}
+
+:where(b, strong) {
+  font-weight: var(--bold-fw, revert);
 }
 
 :where(small) {
@@ -432,6 +436,7 @@
       --ico: var(--accordion-fg, CurrentColor);
       list-style-type: "";
       position: relative;
+      background-color: var(--accordion-summary-bg, var(--background, Canvas));
       &:first-child {
         padding-inline-end: 2rem;
       }
@@ -448,7 +453,7 @@
       }
       &:focus-visible {
         outline: none;
-        background-color: var(--accordion-bg-focus, var(--surf-1));
+        background-color: var(--accordion-bg-focus, var(--surf-2));
       }
     }
     summary::-webkit-details-marker {
@@ -480,6 +485,9 @@
   }
   [open]::details-content {
     background-color: var(--accordion-content-bg, var(--accordion-bg, var(--background, Canvas)));
+  }
+  &:where(.accordion-bg) {
+    --accordion-summary-bg: var(--surf-1);
   }
 }
 
@@ -888,11 +896,11 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   color-scheme: dark;
 }
 
-[class*=fg-] {
+.fg, [class*=fg-] {
   color: var(--fg);
 }
 
-[class*=bg-] {
+.bg, [class*=bg-] {
   color: var(--fg);
   background-color: var(--bg);
 }
@@ -1177,7 +1185,7 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
   content: "";
   block-size: var(--ico-xy, 1em);
   inline-size: var(--ico-xy, 1em);
-  vertical-align: var(--ico-va, -0.145em);
+  vertical-align: var(--ico-va, -0.16em);
   background-color: var(--ico, CurrentColor);
   mask: var(--svg) no-repeat;
   opacity: var(--ico-op, 1);
@@ -1188,12 +1196,10 @@ details:has(.dropdown, [class*=dropdown-], [class*=dropdown-body-]) {
 }
 
 .ico-a:after {
-  --ico-va: -.155em;
   margin-inline-start: var(--ico-ms, 0.2666666667em);
 }
 
 .ico-btn {
-  --ico-va: -.115em;
   --btn-px: 0.65em;
 }
 

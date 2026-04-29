@@ -6,11 +6,11 @@
   color-scheme: dark;
 }
 
-[class*=fg-] {
+.fg, [class*=fg-] {
   color: var(--fg);
 }
 
-[class*=bg-] {
+.bg, [class*=bg-] {
   color: var(--fg);
   background-color: var(--bg);
 }
